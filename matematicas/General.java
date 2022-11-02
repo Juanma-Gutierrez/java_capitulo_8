@@ -49,6 +49,7 @@ public class General {
         boolean prime;
         // Var init
         prime = true;
+        // Process
         for (int i = 2; i <= x / 2; i++) {
             if (x % i == 0)
                 prime = false;
@@ -85,8 +86,177 @@ public class General {
         int res;
         // Var init
         res = 1;
+        // Process
         for (int i = 0; i < exp; i++)
             res *= base;
         return res;
+    }
+
+    /**
+     * digitos: Cuenta el número de dígitos de un número entero.
+     *
+     * @param int x
+     * @return int res
+     */
+    public static int digitos(int x) {
+        // Var declarations
+        int res;
+        // Var init
+        res = 0;
+        // Process
+        do {
+            x /= 10;
+            res++;
+        } while (x > 0);
+        return res;
+    }
+
+    /**
+     * digitoN: Devuelve el dígito que está en la posición n de un número entero. Se
+     * empieza contando por el 0 y de izquierda a derecha.
+     *
+     * @param int x
+     * @param int n
+     * @return res
+     */
+    public static int digitoN(int x, int n) {
+        // Var declarations
+        int res;
+        // Var init
+        res = 0;
+        // Process
+        x = voltea(x);
+        for (int i = 0; i < n; i++) {
+            x /= 10;
+        }
+        res = x % 10;
+        return res;
+    }
+
+    /**
+     * 8. posicionDeDigito: Da la posición de la primera ocurrencia de un dígito
+     * dentro de un número entero. Si no se encuentra, devuelve -1.
+     *
+     * @param int x
+     * @param int dig
+     * @return int res
+     */
+    public static int posicionDeDigito(int x, int dig) {
+        // Var declaration
+        int res;
+        // Var init
+        res = 0;
+        // Process
+        x = voltea(x);
+        do {
+            if (x % 10 == dig)
+                return res;
+            x /= 10;
+            res++;
+        } while (x > 0);
+        return -1;
+    }
+
+    /**
+     * quitaPorDetras: Le quita a un número n dígitos por detrás (por la derecha).
+     *
+     * @param int x
+     * @param int n
+     * @return int res
+     */
+    public static int quitaPorDetras(int x, int n) {
+        // Var declarations
+        int res;
+        // Process
+        res = x / potencia(10, n);
+        return res;
+    }
+
+    /**
+     * quitaPorDelante: Le quita a un número n dígitos por detrás (por la derecha).
+     *
+     * @param int x
+     * @param int n
+     * @return int res
+     */
+    public static int quitaPorDelante(int x, int n) {
+        // Var declarations
+        int res;
+        // Process
+        x = voltea(x);
+        res = x / potencia(10, n);
+        return voltea(res);
+    }
+
+    /**
+     * pegaPorDetras: Añade un dígito a un número por detrás.
+     *
+     * @param int x
+     * @param int n
+     * @return int x
+     */
+    public static int pegaPorDetras(int x, int n) {
+        // Process
+        n = voltea(n);
+        while (n > 0) {
+            x *= 10;
+            x += n % 10;
+            n /= 10;
+        }
+        return x;
+    }
+
+    /**
+     * pegaPorDelantes: Añade un dígito a un número por delante.
+     *
+     * @param int x
+     * @param int n
+     * @return int x
+     */
+    public static int pegaPorDelante(int x, int n) {
+        // Process
+        x = voltea(x);
+        n = voltea(n);
+        while (n > 0) {
+            x *= 10;
+            x += n % 10;
+            n /= 10;
+        }
+        x = voltea(x);
+        return x;
+    }
+
+    /**
+     * 13. trozoDeNumero: Toma como parámetros las posiciones inicial y final dentro
+     * de un número y devuelve el trozo correspondiente.
+     *
+     * @param int x
+     * @param int nInit
+     * @param int nEnd
+     * @return int res
+     */
+    public static int trozoDeNumero(int x, int nInit, int nEnd) {
+        // Var declarations
+        // Var init
+        // Process
+        for (int i = 0; i < nEnd; i++)
+            x /= 10;
+        x = voltea(x);
+        for (int i = 0; i < nInit; i++)
+            x /= 10;
+        x = voltea(x);
+        return x;
+    }
+
+    /**
+     * pegaPorDetras: Añade un dígito a un número por detrás.
+     *
+     * @param int x
+     * @param int n
+     * @return int x & n
+     */
+    public static int juntaNumeros(int x, int n) {
+        // Process
+        return pegaPorDetras(x, n);
     }
 }
