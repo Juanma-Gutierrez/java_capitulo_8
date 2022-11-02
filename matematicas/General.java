@@ -1,25 +1,6 @@
 package matematicas;
 
 public class General {
-    /**
-     * voltea: le da la vuelta a un número
-     *
-     * @param int x
-     * @return int res
-     */
-    public static int voltea(int x) {
-        // Var declarations
-        int res;
-        // Var init
-        res = 0;
-        // Process
-        do {
-            res *= 10;
-            res += x % 10;
-            x /= 10;
-        } while (x > 0);
-        return res;
-    }
 
     /**
      * esCapicua: Devuelve verdadero si el número que se pasa como parámetro es
@@ -29,12 +10,8 @@ public class General {
      * @return boolean
      */
     public static boolean esCapicua(int x) {
-        // Var declaration
-        int num;
-        // Var init
-        num = voltea(x);
         // Process
-        return (num == x);
+        return (x == voltea(x));
     }
 
     /**
@@ -42,19 +19,17 @@ public class General {
      * y falso en caso contrario.
      *
      * @param int x
-     * @return boolean prime
+     * @return boolean
      */
     public static boolean esPrimo(int x) {
-        // Var declaration
-        boolean prime;
-        // Var init
-        prime = true;
         // Process
+        if (x < 2)
+            return false;
         for (int i = 2; i <= x / 2; i++) {
             if (x % i == 0)
-                prime = false;
+                return false;
         }
-        return prime;
+        return true;
     }
 
     /**
@@ -70,7 +45,7 @@ public class General {
         // Process
         do {
             nextPrime = esPrimo(++x);
-        } while (nextPrime != true);
+        } while (!nextPrime);
         return x;
     }
 
@@ -81,12 +56,14 @@ public class General {
      * @param int exp
      * @return int res
      */
-    public static int potencia(int base, int exp) {
+    public static double potencia(int base, int exp) {
         // Var declarations
         int res;
         // Var init
         res = 1;
         // Process
+        if (exp == 0)
+            return 1;
         for (int i = 0; i < exp; i++)
             res *= base;
         return res;
@@ -107,6 +84,26 @@ public class General {
         do {
             x /= 10;
             res++;
+        } while (x > 0);
+        return res;
+    }
+
+    /**
+     * voltea: le da la vuelta a un número
+     *
+     * @param int x
+     * @return int res
+     */
+    public static int voltea(int x) {
+        // Var declarations
+        int res;
+        // Var init
+        res = 0;
+        // Process
+        do {
+            res *= 10;
+            res += x % 10;
+            x /= 10;
         } while (x > 0);
         return res;
     }
