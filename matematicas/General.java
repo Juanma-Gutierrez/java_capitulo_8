@@ -165,7 +165,7 @@ public class General {
         // Var declarations
         int res;
         // Process
-        res = x / potencia(10, n);
+        res = (int) (x / potencia(10, n));
         return res;
     }
 
@@ -181,7 +181,7 @@ public class General {
         int res;
         // Process
         x = voltea(x);
-        res = x / potencia(10, n);
+        res = (int) (x / potencia(10, n));
         return voltea(res);
     }
 
