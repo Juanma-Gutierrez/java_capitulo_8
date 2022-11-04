@@ -78,6 +78,12 @@ Muestra los números capicúa que hay entre 1 y 99999.
 
 Escribe un programa que pase de binario a decimal.
 
+```
+Ejemplo:
+Introduce un número en binario (únicamente puede tener unos y ceros): 10001000
+El número 10001000 convertido a binario queda así: 136
+```
+
 ### Ejercicio 18
 
 Escribe un programa que pase de decimal a binario.
