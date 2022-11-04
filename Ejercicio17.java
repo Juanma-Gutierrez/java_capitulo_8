@@ -34,7 +34,7 @@ public class Ejercicio17 {
             res += General.digitoN(num, i) * General.potencia(2, lon - i - 1);
 
         // Output results
-        System.out.print("El número " + num + " convertido a binario queda así: " + res);
+        System.out.print("El número " + num + " convertido de binario a decimal queda así: " + res);
 
         // Close scanner
         sc.close();

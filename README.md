@@ -81,7 +81,7 @@ Escribe un programa que pase de binario a decimal.
 ```
 Ejemplo:
 Introduce un número en binario (únicamente puede tener unos y ceros): 10001000
-El número 10001000 convertido a binario queda así: 136
+El número 10001000 convertido de binario a decimal queda así: 136
 ```
 
 ### Ejercicio 18
