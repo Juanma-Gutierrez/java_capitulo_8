@@ -256,4 +256,70 @@ public class General {
         // Process
         return pegaPorDetras(x, n);
     }
+
+    /**
+     * pasaADecimal: Pasa un número de cualquier base a decimal.
+     *
+     * @param int x
+     * @param int base
+     * @return int res
+     */
+    public static int pasaADecimal(String x, int base) {
+        // Var declarations
+        int lon;
+        int res;
+        int charToNumber = 0;
+        res = 0;
+        // Process
+        lon = x.length();
+        for (int i = 0; i < lon; i++) {
+            switch (x.charAt(i)) {
+                case 'a':
+                    charToNumber = 10;
+                    break;
+                case 'b':
+                    charToNumber = 11;
+                    break;
+                case 'c':
+                    charToNumber = 12;
+                    break;
+                case 'd':
+                    charToNumber = 13;
+                    break;
+                case 'e':
+                    charToNumber = 14;
+                    break;
+                case 'f':
+                    charToNumber = 15;
+                    break;
+                default:
+                    charToNumber = Character.getNumericValue(x.charAt(i));
+                    break;
+            }
+            res += charToNumber * General.potencia(base, lon - i - 1);
+        }
+        return res;
+    }
+
+    /**
+     * pasaDeDecimal: Pasa un número de decimal a otra base.
+     *
+     * @param int x
+     * @param int base
+     * @return int res
+     */
+    public static String pasaDeDecimal(String x, int base) {
+        // Var declarations
+        String[] baseString = { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f" };
+        int aux = Integer.parseInt(x);
+        String res;
+        res = "";
+        // Process
+        while (aux > 0) {
+            res = baseString[aux % base] + res;
+            aux = (int) aux / base;
+        }
+        ;
+        return res;
+    }
 }
