@@ -16,8 +16,7 @@ import java.util.Scanner;
 public class Ejercicio17 {
     public static void main(String[] args) {
         // Var declarations
-        int num;
-        int lon;
+        String num;
         int res;
 
         // Var init
@@ -27,11 +26,10 @@ public class Ejercicio17 {
         Scanner sc = new Scanner(System.in);
 
         // Process
-        System.out.print("Introduce un número en binario (únicamente puede tener unos y ceros): ");
-        num = sc.nextInt();
-        lon = General.digitos(num);
-        for (int i = 0; i < lon; i++)
-            res += General.digitoN(num, i) * General.potencia(2, lon - i - 1);
+        System.out.print("Por favor, introduzca un número binario: ");
+        num = sc.next();
+
+        res = General.pasaADecimal(num, 2);
 
         // Output results
         System.out.print("El número " + num + " convertido de binario a decimal queda así: " + res);
