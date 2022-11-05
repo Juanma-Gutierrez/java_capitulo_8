@@ -80,8 +80,11 @@ Escribe un programa que pase de binario a decimal.
 
 ```
 Ejemplos:
-Introduce un número en binario (únicamente puede tener unos y ceros): 10001000
-El número 10001000 convertido de binario a decimal queda así: 136
+Por favor, introduzca un número binario: 100100
+El número 100100 convertido de binario a decimal queda así: 36
+
+Por favor, introduzca un número binario: 101010
+El número 101010 convertido de binario a decimal queda así: 42
 ```
 
 ### Ejercicio 18
@@ -90,16 +93,34 @@ Escribe un programa que pase de decimal a binario.
 
 ```
 Ejemplos:
-Introduce un número entero: 16
-El número 16 convertido de decimal a binario queda así: 10000
+Por favor, introduzca un número decimal: 36
+El número 36 convertido de decimal a binario queda así: 100100
 
-Introduce un número entero: 136
-El número 136 convertido de decimal a binario queda así: 10001000
+Por favor, introduzca un número decimal: 42
+El número 42 convertido de decimal a binario queda así: 101010
 ```
 
 ### Ejercicio 19
 
 Une y amplía los dos programas anteriores de tal forma que se permita convertir un número entre cualquiera de las siguientes bases: decimal, binario, hexadecimal y octal.
+
+```
+Ejemplo:
+Por favor, Introduzca la base inicial:
+2: Binario
+8: Octal
+10: Decimal
+16: Hexadecimal
+2
+Ahora introduzca un número en dicha base: 100010
+¿A qué base quieres convertirlo:
+2: Binario
+8: Octal
+10: Decimal
+16: Hexadecimal
+8
+El número 100010 convertido de base 2 a base 8 queda así: 42
+```
 
 ### Ejercicios 20-28
 
