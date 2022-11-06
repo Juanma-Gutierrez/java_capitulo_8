@@ -35,6 +35,7 @@ public class Ejercicios20_28 {
         // Var declarations
         int listArray[];
         int num;
+        int pos;
 
         // Var init
         listArray = new int[42];
@@ -67,6 +68,16 @@ public class Ejercicios20_28 {
         num = sc.nextInt();
         System.out.println("El número " + num + (ArraysPropios.estaEnArrayInt(listArray, num) ? " sí" : " no")
                 + " está en el array");
+
+        // Ejercicio 25
+        System.out.println("\nEjercicio 25");
+        System.out.print("Introduzca un número para averiguar su posición en el array: ");
+        num = sc.nextInt();
+        pos = ArraysPropios.posicionEnArray(listArray, num);
+        if (pos == -1)
+            System.out.println("El número " + num + " no aparece en el array");
+        else
+            System.out.println("El número " + num + " está en la posición " + pos + " del array");
 
         // Close scanner
         sc.close();

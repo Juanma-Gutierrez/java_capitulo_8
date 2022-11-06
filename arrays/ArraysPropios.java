@@ -100,4 +100,26 @@ public class ArraysPropios {
         }
         return false;
     }
+
+    /**
+     * posicionEnArray: Busca un número en un array y devuelve la posición (el
+     * índice) en la que se encuentra.
+     *
+     * @param listArray Array de números enteros
+     * @param num       Número int a buscar en el array
+     * @return int Posición en la que se encuentra el elemento buscado
+     */
+    public static int posicionEnArray(int[] listArray, int num) {
+        // Var declarations
+        int count;
+        // Var init
+        count = 0;
+        for (int n : listArray) {
+            if (n == num)
+                return count;
+            else
+                count++;
+        }
+        return -1;
+    }
 }
