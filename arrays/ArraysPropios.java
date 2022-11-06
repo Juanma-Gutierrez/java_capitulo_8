@@ -21,4 +21,24 @@ public class ArraysPropios {
             arrayInt[i] = (int) (Math.random() * (max - min + 1) + min);
         return arrayInt;
     }
+
+    /**
+     * minimoArrayInt: Devuelve el mínimo del array que se pasa como parámetro.
+     *
+     * @param
+     * @return
+     */
+    public static int minimoArrayInt(int[] listArray) {
+        // Var declarations
+        int min;
+
+        // Var init
+        min = Integer.MAX_VALUE;
+
+        // Process
+        for (int n : listArray)
+            if (n < min)
+                min = n;
+        return min;
+    }
 }

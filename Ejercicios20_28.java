@@ -44,7 +44,7 @@ public class Ejercicios20_28 {
             System.out.printf("%-5d", n);
 
         // Ejercicio 21
-        
+        System.out.println("\nEl número generado más pequeño es el: " + ArraysPropios.minimoArrayInt(listArray));
     }
 
 }
