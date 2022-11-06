@@ -28,6 +28,7 @@
 
 import arrays.ArraysPropios;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Ejercicios20_28 {
     public static void main(String[] args) {
@@ -37,6 +38,9 @@ public class Ejercicios20_28 {
 
         // Var init
         listArray = new int[42];
+
+        // Scanner class
+        Scanner sc = new Scanner(System.in);
 
         // Ejercicio 20
         listArray = ArraysPropios.generaArrayInt(20, 1, 42);
@@ -57,6 +61,14 @@ public class Ejercicios20_28 {
         System.out.println("\nEjercicio 23");
         System.out.println("El promedio: " + ArraysPropios.mediaArrayInt(listArray));
 
-    }
+        // Ejercicio 24
+        System.out.println("\nEjercicio 24");
+        System.out.print("Introduzca un número para comprobar si está en el array: ");
+        num = sc.nextInt();
+        System.out.println("El número " + num + (ArraysPropios.estaEnArrayInt(listArray, num) ? " sí" : " no")
+                + " está en el array");
 
+        // Close scanner
+        sc.close();
+    }
 }

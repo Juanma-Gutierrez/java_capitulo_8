@@ -63,12 +63,12 @@ public class ArraysPropios {
     }
 
     /**
-     * 4. mediaArrayInt: Devuelve la media del array que se pasa como parámetro.
+     * mediaArrayInt: Devuelve la media del array que se pasa como parámetro.
      *
      * @param listArray Array de números enteros
      * @return float El promedio de los números del array pasado como parámetro
      */
-    public static int mediaArrayInt(int[] listArray) {
+    public static float mediaArrayInt(int[] listArray) {
         // Var declarations
         int count;
         int sum;
@@ -82,7 +82,22 @@ public class ArraysPropios {
             sum += n;
             count++;
         }
-        return sum / count;
+        return (float) sum / count;
     }
 
+    /**
+     * estaEnArrayInt: Dice si un número está o no dentro de un array.
+     *
+     * @param listArray Array de números enteros
+     * @param num       Número int a buscar en el array
+     * @return boolean true si está en el array, false si no está en el array
+     */
+    public static boolean estaEnArrayInt(int[] listArray, int num) {
+        // Process
+        for (int n : listArray) {
+            if (n == num)
+                return true;
+        }
+        return false;
+    }
 }
