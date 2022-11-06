@@ -47,6 +47,7 @@ public class Ejercicios20_28 {
         listArray = ArraysPropios.generaArrayInt(20, 1, 42);
         Arrays.sort(listArray);
         System.out.println("Ejercicio 20");
+        System.out.print("El array original: ");
         for (int n : listArray)
             System.out.printf("%-5d", n);
 
@@ -78,6 +79,14 @@ public class Ejercicios20_28 {
             System.out.println("El número " + num + " no aparece en el array");
         else
             System.out.println("El número " + num + " está en la posición " + pos + " del array");
+
+        // Ejercicio 26
+        System.out.println("\nEjercicio 26");
+        System.out.print("El array al revés es: ");
+        listArray = ArraysPropios.volteaArrayInt(listArray);
+        for (int i = 0; i < listArray.length; i++)
+            System.out.print(listArray[i] + " ");
+        System.out.println();
 
         // Close scanner
         sc.close();

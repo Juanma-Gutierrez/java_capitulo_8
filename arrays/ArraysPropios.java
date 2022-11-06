@@ -122,4 +122,24 @@ public class ArraysPropios {
         }
         return -1;
     }
+
+    /**
+     * volteaArrayInt: Le da la vuelta a un array
+     *
+     * @param listArray Array de números enteros
+     * @return reverseArray Array invertido
+     */
+    public static int[] volteaArrayInt(int[] listArray) {
+        // Var declarations
+        int[] reverseArray;
+        int count;
+
+        // Process
+        count = listArray.length;
+        reverseArray = listArray.clone();
+        for (int i = 0; i < count; i++) {
+            reverseArray[count - i - 1] = listArray[i];
+        }
+        return reverseArray;
+    }
 }
