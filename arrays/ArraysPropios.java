@@ -2,6 +2,18 @@ package arrays;
 
 public class ArraysPropios {
     /**
+     * imprimeArrayInt: Imprime un array por pantalla
+     *
+     * @param listArray Array de números enteros
+     * @return
+     */
+    public static void imprimeArray(int[] listArray) {
+        for (int i = 0; i < listArray.length; i++)
+            System.out.print(listArray[i] + " ");
+        System.out.println();
+    }
+
+    /**
      * generaArrayInt: Genera un array de tamaño n con números aleatorios cuyo
      * intervalo (mínimo y máximo) se indica como parámetro.
      *
@@ -141,5 +153,31 @@ public class ArraysPropios {
             reverseArray[count - i - 1] = listArray[i];
         }
         return reverseArray;
+    }
+
+    /**
+     * rotaDerechaArrayInt: Rota n posiciones a la derecha los números de un array.
+     *
+     * @param listArray Array de números enteros
+     * @param n         Número de posiciones a rotar hacia la derecha
+     * @return Array rotado
+     */
+    public static int[] rotaDerechaArrayInt(int[] listArray, int n) {
+        // Var declarations
+        int[] auxArray;
+        int count;
+
+        // Var init
+        auxArray = listArray.clone();
+        count = 0;
+
+        // Process
+        for (int i = 0; i < listArray.length - n; i++) {
+            auxArray[i + n] = listArray[i];
+        }
+        for (int i = listArray.length - n; i < listArray.length; i++) {
+            auxArray[count++] = listArray[i];
+        }
+        return auxArray;
     }
 }

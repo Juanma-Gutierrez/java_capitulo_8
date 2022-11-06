@@ -38,13 +38,15 @@ public class Ejercicios20_28 {
         int pos;
 
         // Var init
-        listArray = new int[42];
+        listArray = new int[20];
 
         // Scanner class
         Scanner sc = new Scanner(System.in);
 
         // Ejercicio 20
         listArray = ArraysPropios.generaArrayInt(20, 1, 42);
+        for (int i = 0; i < 20; i++)
+            listArray[i] = i;
         Arrays.sort(listArray);
         System.out.println("Ejercicio 20");
         System.out.print("El array original: ");
@@ -83,10 +85,14 @@ public class Ejercicios20_28 {
         // Ejercicio 26
         System.out.println("\nEjercicio 26");
         System.out.print("El array al revés es: ");
-        listArray = ArraysPropios.volteaArrayInt(listArray);
-        for (int i = 0; i < listArray.length; i++)
-            System.out.print(listArray[i] + " ");
-        System.out.println();
+        ArraysPropios.imprimeArray(ArraysPropios.volteaArrayInt(listArray));
+
+        // Ejercicio 27
+        System.out.println("\nEjercicio 27");
+        System.out.print("Introduzca cuántas posiciones quiere rotar hacia la derecha: ");
+        num = sc.nextInt();
+        System.out.print("El array rotado " + num + " elementos queda: ");
+        ArraysPropios.imprimeArray(ArraysPropios.rotaDerechaArrayInt(listArray, num));
 
         // Close scanner
         sc.close();
