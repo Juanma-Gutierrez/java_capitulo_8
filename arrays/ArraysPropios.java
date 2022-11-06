@@ -8,7 +8,7 @@ public class ArraysPropios {
      * @param n   Número de elementos aleatorios a crear
      * @param min Intervalo mínimo (incluido)
      * @param max Intervalo máximo (incluido)
-     * @return    Array de enteros aleatorio
+     * @return Array de enteros aleatorio
      */
     public static int[] generaArrayInt(int n, int min, int max) {
         // Var declarations
@@ -26,7 +26,7 @@ public class ArraysPropios {
      * minimoArrayInt: Devuelve el mínimo del array que se pasa como parámetro.
      *
      * @param listArray Array de números enteros
-     * @return          El número más pequeño del array pasdo como parámetro
+     * @return El número más pequeño del array pasdo como parámetro
      */
     public static int minimoArrayInt(int[] listArray) {
         // Var declarations
@@ -40,5 +40,25 @@ public class ArraysPropios {
             if (n < min)
                 min = n;
         return min;
+    }
+
+    /**
+     * maximoArrayInt: Devuelve el máximo del array que se pasa como parámetro.
+     *
+     * @param listArray Array de números enteros
+     * @return El número más alto del array pasado como parámetro
+     */
+    public static int maximoArrayInt(int[] listArray) {
+        // Var declarations
+        int max;
+
+        // Var init
+        max = Integer.MIN_VALUE;
+
+        // Process
+        for (int n : listArray)
+            if (n > max)
+                max = n;
+        return max;
     }
 }

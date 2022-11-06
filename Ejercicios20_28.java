@@ -40,11 +40,15 @@ public class Ejercicios20_28 {
 
         // Ejercicio 20
         listArray = ArraysPropios.generaArrayInt(20, 1, 42);
+        Arrays.sort(listArray);
         for (int n : listArray)
             System.out.printf("%-5d", n);
 
         // Ejercicio 21
         System.out.println("\nEl número generado más pequeño es el: " + ArraysPropios.minimoArrayInt(listArray));
+
+        // Ejercicio 22
+        System.out.println("\nEl número generado más grande es el: " + ArraysPropios.maximoArrayInt(listArray));
     }
 
 }
