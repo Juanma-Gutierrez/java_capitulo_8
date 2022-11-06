@@ -165,19 +165,42 @@ public class ArraysPropios {
     public static int[] rotaDerechaArrayInt(int[] listArray, int n) {
         // Var declarations
         int[] auxArray;
-        int count;
 
         // Var init
         auxArray = listArray.clone();
-        count = 0;
 
         // Process
-        for (int i = 0; i < listArray.length - n; i++) {
-            auxArray[i + n] = listArray[i];
-        }
-        for (int i = listArray.length - n; i < listArray.length; i++) {
-            auxArray[count++] = listArray[i];
-        }
+        // Move to the right
+        for (int i = n; i < listArray.length; i++)
+            auxArray[i] = listArray[i - n];
+        // Move to pos 0
+        for (int i = 0; i < n; i++)
+            auxArray[i] = listArray[listArray.length - n + i];
+        return auxArray;
+    }
+
+    /**
+     * rotaIzquierdaArrayInt: Rota n posiciones a la izquierda los números de un
+     * array.
+     *
+     * @param listArray Array de números enteros
+     * @param n         Número de posiciones a rotar hacia la izquierda
+     * @return Array rotado
+     */
+    public static int[] rotaIzquierdaArrayInt(int[] listArray, int n) {
+        // Var declarations
+        int[] auxArray;
+
+        // Var init
+        auxArray = listArray.clone();
+
+        // Process
+        // Move to pos 0
+        for (int i = n; i < listArray.length; i++)
+            auxArray[i - n] = listArray[i];
+        // Move to the left
+        for (int i = 0; i < n; i++)
+            auxArray[listArray.length - n + i] = listArray[i];
         return auxArray;
     }
 }

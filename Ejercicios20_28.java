@@ -45,16 +45,12 @@ public class Ejercicios20_28 {
 
         // Ejercicio 20
         listArray = ArraysPropios.generaArrayInt(20, 1, 42);
-        for (int i = 0; i < 20; i++)
-            listArray[i] = i;
-        Arrays.sort(listArray);
         System.out.println("Ejercicio 20");
         System.out.print("El array original: ");
-        for (int n : listArray)
-            System.out.printf("%-5d", n);
+        ArraysPropios.imprimeArray(listArray);
 
         // Ejercicio 21
-        System.out.println("\n\nEjercicio 21");
+        System.out.println("\nEjercicio 21");
         System.out.println("El número generado más pequeño es el: " + ArraysPropios.minimoArrayInt(listArray));
 
         // Ejercicio 22
@@ -93,6 +89,13 @@ public class Ejercicios20_28 {
         num = sc.nextInt();
         System.out.print("El array rotado " + num + " elementos queda: ");
         ArraysPropios.imprimeArray(ArraysPropios.rotaDerechaArrayInt(listArray, num));
+
+        // Ejercicio 28
+        System.out.println("\nEjercicio 28");
+        System.out.print("Introduzca cuántas posiciones quiere rotar hacia la izquierda: ");
+        num = sc.nextInt();
+        System.out.print("El array rotado " + num + " elementos queda: ");
+        ArraysPropios.imprimeArray(ArraysPropios.rotaIzquierdaArrayInt(listArray, num));
 
         // Close scanner
         sc.close();
