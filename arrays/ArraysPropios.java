@@ -61,4 +61,28 @@ public class ArraysPropios {
                 max = n;
         return max;
     }
+
+    /**
+     * 4. mediaArrayInt: Devuelve la media del array que se pasa como parámetro.
+     *
+     * @param listArray Array de números enteros
+     * @return float El promedio de los números del array pasado como parámetro
+     */
+    public static int mediaArrayInt(int[] listArray) {
+        // Var declarations
+        int count;
+        int sum;
+
+        // Var init
+        count = 0;
+        sum = 0;
+
+        // Process
+        for (int n : listArray) {
+            sum += n;
+            count++;
+        }
+        return sum / count;
+    }
+
 }

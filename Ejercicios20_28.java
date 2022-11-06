@@ -41,14 +41,22 @@ public class Ejercicios20_28 {
         // Ejercicio 20
         listArray = ArraysPropios.generaArrayInt(20, 1, 42);
         Arrays.sort(listArray);
+        System.out.println("Ejercicio 20");
         for (int n : listArray)
             System.out.printf("%-5d", n);
 
         // Ejercicio 21
-        System.out.println("\nEl número generado más pequeño es el: " + ArraysPropios.minimoArrayInt(listArray));
+        System.out.println("\n\nEjercicio 21");
+        System.out.println("El número generado más pequeño es el: " + ArraysPropios.minimoArrayInt(listArray));
 
         // Ejercicio 22
-        System.out.println("\nEl número generado más grande es el: " + ArraysPropios.maximoArrayInt(listArray));
+        System.out.println("\nEjercicio 22");
+        System.out.println("El número generado más grande es el: " + ArraysPropios.maximoArrayInt(listArray));
+
+        // Ejercicio 23
+        System.out.println("\nEjercicio 23");
+        System.out.println("El promedio: " + ArraysPropios.mediaArrayInt(listArray));
+
     }
 
 }
