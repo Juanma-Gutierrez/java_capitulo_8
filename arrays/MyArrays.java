@@ -1,6 +1,6 @@
 package arrays;
 
-public class ArraysPropios {
+public class MyArrays {
     /**
      * imprimeArrayInt: Imprime un array por pantalla
      *

@@ -26,8 +26,7 @@
  * un array.
  */
 
-import arrays.ArraysPropios;
-import java.util.Arrays;
+import arrays.MyArrays;
 import java.util.Scanner;
 
 public class Ejercicios20_28 {
@@ -44,35 +43,35 @@ public class Ejercicios20_28 {
         Scanner sc = new Scanner(System.in);
 
         // Ejercicio 20
-        listArray = ArraysPropios.generaArrayInt(20, 1, 42);
+        listArray = MyArrays.generaArrayInt(20, 1, 42);
         System.out.println("Ejercicio 20");
         System.out.print("El array original: ");
-        ArraysPropios.imprimeArray(listArray);
+        MyArrays.imprimeArray(listArray);
 
         // Ejercicio 21
         System.out.println("\nEjercicio 21");
-        System.out.println("El número generado más pequeño es el: " + ArraysPropios.minimoArrayInt(listArray));
+        System.out.println("El número generado más pequeño es el: " + MyArrays.minimoArrayInt(listArray));
 
         // Ejercicio 22
         System.out.println("\nEjercicio 22");
-        System.out.println("El número generado más grande es el: " + ArraysPropios.maximoArrayInt(listArray));
+        System.out.println("El número generado más grande es el: " + MyArrays.maximoArrayInt(listArray));
 
         // Ejercicio 23
         System.out.println("\nEjercicio 23");
-        System.out.println("El promedio: " + ArraysPropios.mediaArrayInt(listArray));
+        System.out.println("El promedio: " + MyArrays.mediaArrayInt(listArray));
 
         // Ejercicio 24
         System.out.println("\nEjercicio 24");
         System.out.print("Introduzca un número para comprobar si está en el array: ");
         num = sc.nextInt();
-        System.out.println("El número " + num + (ArraysPropios.estaEnArrayInt(listArray, num) ? " sí" : " no")
+        System.out.println("El número " + num + (MyArrays.estaEnArrayInt(listArray, num) ? " sí" : " no")
                 + " está en el array");
 
         // Ejercicio 25
         System.out.println("\nEjercicio 25");
         System.out.print("Introduzca un número para averiguar su posición en el array: ");
         num = sc.nextInt();
-        pos = ArraysPropios.posicionEnArray(listArray, num);
+        pos = MyArrays.posicionEnArray(listArray, num);
         if (pos == -1)
             System.out.println("El número " + num + " no aparece en el array");
         else
@@ -81,21 +80,21 @@ public class Ejercicios20_28 {
         // Ejercicio 26
         System.out.println("\nEjercicio 26");
         System.out.print("El array al revés es: ");
-        ArraysPropios.imprimeArray(ArraysPropios.volteaArrayInt(listArray));
+        MyArrays.imprimeArray(MyArrays.volteaArrayInt(listArray));
 
         // Ejercicio 27
         System.out.println("\nEjercicio 27");
         System.out.print("Introduzca cuántas posiciones quiere rotar hacia la derecha: ");
         num = sc.nextInt();
         System.out.print("El array rotado " + num + " elementos queda: ");
-        ArraysPropios.imprimeArray(ArraysPropios.rotaDerechaArrayInt(listArray, num));
+        MyArrays.imprimeArray(MyArrays.rotaDerechaArrayInt(listArray, num));
 
         // Ejercicio 28
         System.out.println("\nEjercicio 28");
         System.out.print("Introduzca cuántas posiciones quiere rotar hacia la izquierda: ");
         num = sc.nextInt();
         System.out.print("El array rotado " + num + " elementos queda: ");
-        ArraysPropios.imprimeArray(ArraysPropios.rotaIzquierdaArrayInt(listArray, num));
+        MyArrays.imprimeArray(MyArrays.rotaIzquierdaArrayInt(listArray, num));
 
         // Close scanner
         sc.close();
