@@ -47,4 +47,22 @@ public class BidimensionalArrays {
 
         return listArray;
     }
+
+    /**
+     * filaDeArrayBiInt: Devuelve la fila i-ésima del array que se pasa
+     * como parámetro.
+     *
+     * @param listArray Array bidimensional
+     * @param i         Número de fila
+     * @return Array con la fila i del array introducido
+     */
+    public static int[] filaDeArrayBiInt(int[][] listArray, int i) {
+        // Var declarations
+        int[] resArray;
+        resArray = new int[listArray[i].length];
+        for (int j = 0; j < listArray[i].length; j++){
+            resArray[j] = listArray[i][j];
+        }
+        return resArray;
+    }
 }

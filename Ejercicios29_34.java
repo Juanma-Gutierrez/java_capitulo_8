@@ -33,6 +33,8 @@
  */
 
 import arrays.BidimensionalArrays;
+import arrays.MyArrays;
+
 import java.util.Scanner;
 
 public class Ejercicios29_34 {
@@ -43,9 +45,11 @@ public class Ejercicios29_34 {
         int min;
         int max;
         int[][] listArray;
+        int[] auxArray;
 
         // Var init;
         listArray = new int[0][0];
+        auxArray = new int[0];
         row = 0;
         col = 0;
         min = 0;
@@ -63,6 +67,14 @@ public class Ejercicios29_34 {
         listArray = BidimensionalArrays.generaArrayBiInt(row, col, min, max);
         System.out.println("Array bidimensional de números aleatorios: ");
         BidimensionalArrays.printBiArray(listArray);
+
+        // Ejercicio 30
+        System.out.println("Ejercicio 30");
+        System.out.print("Introduce el número de fila que quieres mostrar:");
+        row = sc.nextInt();
+        auxArray = BidimensionalArrays.filaDeArrayBiInt(listArray, row);
+        System.out.println("La nueva fila es: ");
+        MyArrays.imprimeArray(auxArray);
 
         // Close scanner
         sc.close();
