@@ -73,7 +73,15 @@ public class Ejercicios29_34 {
         System.out.print("Introduce el número de fila que quieres mostrar:");
         row = sc.nextInt();
         auxArray = BidimensionalArrays.filaDeArrayBiInt(listArray, row);
-        System.out.println("La nueva fila es: ");
+        System.out.println("La fila es: ");
+        MyArrays.imprimeArray(auxArray);
+
+        // Ejercicio 31
+        System.out.println("Ejercicio 31");
+        System.out.print("Introduce el número de columna que quieres mostrar:");
+        col = sc.nextInt();
+        auxArray = BidimensionalArrays.columnaDeArrayBiInt(listArray, col);
+        System.out.println("La columna es: ");
         MyArrays.imprimeArray(auxArray);
 
         // Close scanner

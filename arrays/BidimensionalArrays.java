@@ -37,14 +37,11 @@ public class BidimensionalArrays {
     public static int[][] generaArrayBiInt(int n, int m, int min, int max) {
         // Var declarations
         int[][] listArray;
-
         // Var init
         listArray = new int[n][m];
-
         // Process
         for (int i = 0; i < n; i++)
             listArray[i] = MyArrays.generaArrayInt(m, min, max);
-
         return listArray;
     }
 
@@ -59,10 +56,30 @@ public class BidimensionalArrays {
     public static int[] filaDeArrayBiInt(int[][] listArray, int i) {
         // Var declarations
         int[] resArray;
+        // Var init
         resArray = new int[listArray[i].length];
-        for (int j = 0; j < listArray[i].length; j++){
+        // Process
+        for (int j = 0; j < listArray[i].length; j++)
             resArray[j] = listArray[i][j];
-        }
+        return resArray;
+    }
+
+    /**
+     * columnaDeArrayBiInt: Devuelve la columna j-ésima del array que se
+     * pasa como parámetro.
+     *
+     * @param listArray Array bidimensional
+     * @param j         Número de columna
+     * @return Array con los datos de la columna j del array introducido
+     */
+    public static int[] columnaDeArrayBiInt(int[][] listArray, int j) {
+        // Var declarations
+        int[] resArray;
+        // Var init
+        resArray = new int[listArray.length];
+        // Process
+        for (int i = 0; i < listArray.length; i++)
+            resArray[i] = listArray[i][j];
         return resArray;
     }
 }
