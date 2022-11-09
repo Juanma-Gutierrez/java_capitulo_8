@@ -38,7 +38,7 @@ public class MyArrays {
      * minimoArrayInt: Devuelve el mínimo del array que se pasa como parámetro.
      *
      * @param listArray Array de números enteros
-     * @return El número más pequeño del array pasdo como parámetro
+     * @return El número más pequeño del array pasado como parámetro
      */
     public static int minimoArrayInt(int[] listArray) {
         // Var declarations

@@ -126,8 +126,7 @@ public class BidimensionalArrays {
      * @param listArray Array bidimensional
      * @param num       Número a encontrar en el array
      * @return Array con los valores fila y columna de la posición del número en el
-     *         array introducido.
-     * @return {-1, -1} si no encuentra el valor en el array
+     *         array introducido. {-1, -1} si no encuentra el valor en el array
      */
     public static int[] coordenadasEnArrayBiInt(int[][] listArray, int num) {
         // Var declarations
@@ -145,5 +144,27 @@ public class BidimensionalArrays {
         resArray[0] = -1;
         resArray[1] = -1;
         return resArray;
+    }
+
+    /**
+     * esPuntoDeSilla: Dice si un número es o no punto de silla, es decir,
+     * mínimo en su fila y máximo en su columna.
+     *
+     * @param listArray Array bidimensional
+     * @param num       Número a encontrar en el array para saber si es punto de
+     *                  silla
+     * @return boolean true si es punto de silla, false si no lo es
+     */
+    public static boolean esPuntoDeSilla(int[][] listArray, int num) {
+        // Var declarations
+        int[] pos;
+        int minRow;
+        int maxCol;
+
+        pos = coordenadasEnArrayBiInt(listArray, num);
+        minRow = MyArrays.minimoArrayInt(filaDeArrayBiInt(listArray, pos[0]));
+        maxCol = MyArrays.maximoArrayInt(columnaDeArrayBiInt(listArray, pos[1]));
+
+        return (minRow == listArray[pos[0]][pos[1]] && maxCol == listArray[pos[0]][pos[1]]);
     }
 }

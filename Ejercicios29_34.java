@@ -47,15 +47,17 @@ public class Ejercicios29_34 {
         int max;
         int[][] listArray;
         int[] auxArray;
+        boolean bool;
 
         // Var init;
         listArray = new int[0][0];
         auxArray = new int[0];
-        num=0;
+        num = 0;
         row = 0;
         col = 0;
         min = 0;
         max = 42;
+        bool = false;
 
         // Scanner class
         Scanner sc = new Scanner(System.in);
@@ -92,6 +94,14 @@ public class Ejercicios29_34 {
         auxArray = BidimensionalArrays.coordenadasEnArrayBiInt(listArray, num);
         System.out.println("Las posiciones son (fila/columna): ");
         MyArrays.imprimeArray(auxArray);
+
+        // Ejercicio 33
+        // **esPuntoDeSilla**: Dice si un número es o no punto de silla, es decir,
+        // mínimo en su fila y máximo en su columna.
+        System.out.print("Introduce el número quieres saber si es punto de silla: ");
+        num = sc.nextInt();
+        bool = BidimensionalArrays.esPuntoDeSilla(listArray, num);
+        System.out.println("¿Es punto de silla?: " + bool);
 
         // Close scanner
         sc.close();
