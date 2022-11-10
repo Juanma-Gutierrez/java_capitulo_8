@@ -1,5 +1,36 @@
 package matematicas;
 
+/*
+ * Lista de funciones de la biblioteca General:
+ *
+ * esCapicua: Devuelve verdadero si el número que se pasa es capicúa
+ * esPrimo: Devuelve verdadero si el número pasado es primo
+ * siguientePrimo: Devuelve el menor primo que es mayor al número pasado
+ * potencia: Dada una base y un exponente devuelve la potencia.
+ * digitos: Cuenta el número de dígitos de un número entero
+ * voltea: le da la vuelta a un número
+ * digitoN: Devuelve el dígito que está en la posición n de un número entero
+ * posicionDeDigito: Da la posición de la 1ª ocurrencia de un dígito dentro de un número entero
+ * quitaPorDetras: Le quita a un número n dígitos por detrás (por la derecha)
+ * quitaPorDelante: Le quita a un número n dígitos por detrás (por la derecha)
+ * pegaPorDetras: Añade un dígito a un número por detrás
+ * pegaPorDelantes: Añade un dígito a un número por delante
+ * trozoDeNumero: Toma como parámetros las posiciones inicial y final dentro de un número y devuelve el trozo correspondiente
+ * juntaNumeros: Pega dos números para formar uno
+ * pasaADecimal: Pasa un número de cualquier base a decimal
+ * pasaDeDecimal: Pasa un número de decimal a otra base
+ * convierteEnPalotes Convierte en a base Palotes el número pasado
+ * 
+  */
+
+/**
+ * Exercise: Varios
+ *
+ * @version: 07/11/2022
+ * @author: Juan Manuel Gutiérrez
+ *          https://github.com/Juanma-Gutierrez
+ */
+
 public class General {
 
     /**
@@ -131,7 +162,7 @@ public class General {
     }
 
     /**
-     * 8. posicionDeDigito: Da la posición de la primera ocurrencia de un dígito
+     * posicionDeDigito: Da la posición de la primera ocurrencia de un dígito
      * dentro de un número entero. Si no se encuentra, devuelve -1.
      *
      * @param int x
@@ -224,7 +255,7 @@ public class General {
     }
 
     /**
-     * 13. trozoDeNumero: Toma como parámetros las posiciones inicial y final dentro
+     * trozoDeNumero: Toma como parámetros las posiciones inicial y final dentro
      * de un número y devuelve el trozo correspondiente.
      *
      * @param int x
@@ -246,7 +277,7 @@ public class General {
     }
 
     /**
-     * pegaPorDetras: Añade un dígito a un número por detrás.
+     * juntaNumeros: Pega dos números para formar uno.
      *
      * @param int x
      * @param int n

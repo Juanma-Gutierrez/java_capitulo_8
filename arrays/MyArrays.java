@@ -1,4 +1,28 @@
 package arrays;
+/*
+ * Lista de funciones de la biblioteca MyArrays:
+ *
+ * imprimeArrayInt: Imprime un array por pantalla
+ * generaArrayInt: Genera un array de tamaño n con números aleatorios
+ * minimoArrayInt: Devuelve el mínimo del array que se pasa como parámetro
+ * maximoArrayInt: Devuelve el máximo del array que se pasa como parámetro
+ * mediaArrayInt: Devuelve la media del array que se pasa como parámetro
+ * estaEnArrayInt: Dice si un número está o no dentro de un array
+ * posicionEnArray: Busca un número en un array y devuelve la posición
+ * volteaArrayInt: Le da la vuelta a un array
+ * rotaDerechaArrayInt: Rota n posiciones a la derecha los números de un array
+ * rotaIzquierdaArrayInt: Rota n posiciones a la izquierda los números de un
+ * array
+ * filtraPrimos: Devuelve un array con los primos del array pasado por parámetro
+ */
+
+/**
+ * Exercise: Varios
+ *
+ * @version: 10/11/2022
+ * @author: Juan Manuel Gutiérrez
+ *          https://github.com/Juanma-Gutierrez
+ */
 
 public class MyArrays {
     /**
@@ -202,5 +226,23 @@ public class MyArrays {
         for (int i = 0; i < n; i++)
             auxArray[listArray.length - n + i] = listArray[i];
         return auxArray;
+    }
+
+    /**
+     * filtraPrimos: Devuelve un array con los números primos del array que se ha
+     * pasado por parámetro
+     *
+     * @param int x[] Array de números enteros
+     * @return array con los primos encontrados en el array pasado por parámetro
+     */
+    public static int[] filtraPrimos(int x[]) {
+        // Var declarations
+        int[] res;
+        int count;
+
+        // Comprobar el número de primos que se encuentran en el array
+
+        return res;
+
     }
 }
