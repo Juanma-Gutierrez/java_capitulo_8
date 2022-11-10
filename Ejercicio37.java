@@ -21,6 +21,7 @@ Esta función convierte el número n al sistema Morse y lo devuelve en una caden
  */
 
 import matematicas.General;
+import java.util.Scanner;
 
 public class Ejercicio37 {
     public static void main(String[] args) {
@@ -28,9 +29,15 @@ public class Ejercicio37 {
         int num;
         String morse;
 
+        // Scanner class
+        Scanner sc = new Scanner(System.in);
+
         // Var init;
-        num = 213;
         morse = "";
+
+        // Input data
+        System.out.print("Introduce un número: ");
+        num = sc.nextInt();
 
         // Process
         morse = General.convierteEnMorse(num);
@@ -38,6 +45,8 @@ public class Ejercicio37 {
         System.out.println("\nEl número " + num + " pasado a morse es el siguiente:");
         System.out.println(morse);
 
+        // Close scanner
+        sc.close();
     }
 
 }

@@ -406,7 +406,7 @@ public class General {
      */
     public static String convierteEnMorse(int n) {
         // Var declaration
-        String[] code = { "_____", ".____", "..___", "...__","...._", ".....", "_....", "__...", "___..", "____." };
+        String[] code = { "_____", ".____", "..___", "...__", "...._", ".....", "_....", "__...", "___..", "____." };
         int digits;
         String res;
 
@@ -417,6 +417,36 @@ public class General {
         // Process
         for (int i = 0; i < digits; i++)
             res += code[digitoN(n, i)];
+
+        return res;
+    }
+
+    /**
+     * convierteEnPalabras: Convierte los dígitos del número n en las
+     * correspondientes palabras y lo devuelve todo en una cadena de caracteres. Por
+     * ejemplo, el 470213 convertido a palabras sería: cuatro, siete, cero, dos,
+     * uno, tres.
+     *
+     * @param n Número a convertir
+     * @return String con el número convertido en palabras
+     */
+
+    public static String convierteEnPalabras(int n) {
+        // Var declaration
+        String[] code = { "cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve" };
+        int digits;
+        String res;
+
+        // Var init
+        digits = digitos(n);
+        res = "";
+
+        // Process
+        for (int i = 0; i < digits; i++)
+            if (i != digits - 1)
+                res += code[digitoN(n, i)] + ", ";
+            else
+                res += code[digitoN(n, i)];
 
         return res;
     }
