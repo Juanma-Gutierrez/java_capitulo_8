@@ -322,4 +322,37 @@ public class General {
         ;
         return res;
     }
+
+    /**
+     * convierteEnPalotes Convierte en un string con base Palotes un número entrado
+     * como parámetro
+     *
+     * @param int n Número que se quiere convertir a la base Palotes
+     * @return String con la cadena palotes
+     */
+    public static String convierteEnPalotes(int n) {
+        // Var declarations
+        String res;
+        int nLong;
+        int aux;
+
+        // Var init
+        res = "";
+
+        // Cuenta longitud del número
+        nLong = digitos(n);
+
+        // Process
+        while (n > 0) {
+            aux = (int) ((int) n / (Math.pow(10, nLong - 1)));
+            for (int i = 0; i < aux; i++)
+                res += "|";
+            n = (int) ((int) n % (Math.pow(10, nLong - 1)));
+            nLong--;
+            if (nLong > 0)
+                res += "-";
+        }
+
+        return res;
+    }
 }
