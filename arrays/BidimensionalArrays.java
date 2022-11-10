@@ -24,8 +24,8 @@ public class BidimensionalArrays {
     /**
      * printBiArray: Imprime el array bidimensional introducido por parámetro
      *
-     * @param listArray[][] Array a imprimir
-     * @return
+     * @param listArray Array a imprimir
+     * @return Sin salida, únicamente imprime el array pasado
      */
     public static void printBiArray(int listArray[][]) {
         for (int i = 0; i < listArray.length; i++) {
@@ -44,7 +44,7 @@ public class BidimensionalArrays {
      * @param m   Tamaño del array
      * @param min Intervalo mínimo aleatorio
      * @param max Intervalo mínimo aleatorio
-     * @return Array de números aleatorios de n x m
+     * @return Array bidimensional
      */
     public static int[][] generaArrayBiInt(int n, int m, int min, int max) {
         // Var declarations
@@ -63,7 +63,7 @@ public class BidimensionalArrays {
      *
      * @param listArray Array bidimensional
      * @param i         Número de fila
-     * @return Array con la fila i del array introducido
+     * @return Array con la fila seleccionada
      */
     public static int[] filaDeArrayBiInt(int[][] listArray, int i) {
         // Var declarations
@@ -91,7 +91,7 @@ public class BidimensionalArrays {
      *
      * @param listArray Array bidimensional
      * @param j         Número de columna
-     * @return Array con los datos de la columna j del array introducido
+     * @return Array con la columna seleccionada
      */
     public static int[] columnaDeArrayBiInt(int[][] listArray, int j) {
         // Var declarations
@@ -121,8 +121,7 @@ public class BidimensionalArrays {
      *
      * @param listArray Array bidimensional
      * @param num       Número a encontrar en el array
-     * @return Array con los valores fila y columna de la posición del número en el
-     *         array introducido. {-1, -1} si no encuentra el valor en el array
+     * @return Array con la posición
      */
     public static int[] coordenadasEnArrayBiInt(int[][] listArray, int num) {
         // Var declarations
@@ -147,9 +146,8 @@ public class BidimensionalArrays {
      * mínimo en su fila y máximo en su columna.
      *
      * @param listArray Array bidimensional
-     * @param num       Número a encontrar en el array para saber si es punto de
-     *                  silla
-     * @return boolean true si es punto de silla, false si no lo es
+     * @param num       Número a encontrar en el array
+     * @return boolean indicando si es punto de silla
      */
     public static boolean esPuntoDeSilla(int[][] listArray, int num) {
         // Var declarations
@@ -180,7 +178,7 @@ public class BidimensionalArrays {
      * @param row       Fila del array
      * @param col       Columna del array
      * @param dir       Dirección nose o neso
-     * @return array con los elementos de la diagonal seleccionada
+     * @return Array con la diagonal indicada
      */
     public static int[] diagonal(int[][] listArray, int row, int col, String dir) {
         // Var declarations

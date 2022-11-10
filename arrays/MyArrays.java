@@ -31,7 +31,7 @@ public class MyArrays {
      * imprimeArrayInt: Imprime un array por pantalla
      *
      * @param listArray Array de números enteros
-     * @return
+     * @return Sin return, únicamente impresión en pantalla
      */
     public static void imprimeArray(int[] listArray) {
         for (int i = 0; i < listArray.length; i++)
@@ -46,7 +46,7 @@ public class MyArrays {
      * @param n   Número de elementos aleatorios a crear
      * @param min Intervalo mínimo (incluido)
      * @param max Intervalo máximo (incluido)
-     * @return Array de enteros aleatorio
+     * @return Array generado
      */
     public static int[] generaArrayInt(int n, int min, int max) {
         // Var declarations
@@ -64,7 +64,7 @@ public class MyArrays {
      * minimoArrayInt: Devuelve el mínimo del array que se pasa como parámetro.
      *
      * @param listArray Array de números enteros
-     * @return El número más pequeño del array pasado como parámetro
+     * @return Número mínimo
      */
     public static int minimoArrayInt(int[] listArray) {
         // Var declarations
@@ -84,7 +84,7 @@ public class MyArrays {
      * maximoArrayInt: Devuelve el máximo del array que se pasa como parámetro.
      *
      * @param listArray Array de números enteros
-     * @return El número más alto del array pasado como parámetro
+     * @return Número máximo
      */
     public static int maximoArrayInt(int[] listArray) {
         // Var declarations
@@ -104,7 +104,7 @@ public class MyArrays {
      * mediaArrayInt: Devuelve la media del array que se pasa como parámetro.
      *
      * @param listArray Array de números enteros
-     * @return float El promedio de los números del array pasado como parámetro
+     * @return Media del array
      */
     public static float mediaArrayInt(int[] listArray) {
         // Var declarations
@@ -128,7 +128,7 @@ public class MyArrays {
      *
      * @param listArray Array de números enteros
      * @param num       Número int a buscar en el array
-     * @return boolean true si está en el array, false si no está en el array
+     * @return booleano indicando si está o no en el array
      */
     public static boolean estaEnArrayInt(int[] listArray, int num) {
         // Process
@@ -145,7 +145,7 @@ public class MyArrays {
      *
      * @param listArray Array de números enteros
      * @param num       Número int a buscar en el array
-     * @return int Posición en la que se encuentra el elemento buscado
+     * @return Posición en el array
      */
     public static int posicionEnArray(int[] listArray, int num) {
         // Var declarations
@@ -165,7 +165,7 @@ public class MyArrays {
      * volteaArrayInt: Le da la vuelta a un array
      *
      * @param listArray Array de números enteros
-     * @return reverseArray Array invertido
+     * @return Array dado la vuelta
      */
     public static int[] volteaArrayInt(int[] listArray) {
         // Var declarations
@@ -186,7 +186,7 @@ public class MyArrays {
      *
      * @param listArray Array de números enteros
      * @param n         Número de posiciones a rotar hacia la derecha
-     * @return Array rotado
+     * @return Array rotado n posiciones a la derecha
      */
     public static int[] rotaDerechaArrayInt(int[] listArray, int n) {
         // Var declarations
@@ -211,7 +211,7 @@ public class MyArrays {
      *
      * @param listArray Array de números enteros
      * @param n         Número de posiciones a rotar hacia la izquierda
-     * @return Array rotado
+     * @return Array rotado n posiciones a la izquierda
      */
     public static int[] rotaIzquierdaArrayInt(int[] listArray, int n) {
         // Var declarations
@@ -234,8 +234,8 @@ public class MyArrays {
      * filtraPrimos: Devuelve un array con los números primos del array que se ha
      * pasado por parámetro
      *
-     * @param int x[] Array de números enteros
-     * @return array con los primos encontrados en el array pasado por parámetro
+     * @param x Array de números enteros
+     * @return Array con los primos encontrados en el array pasado
      */
     public static int[] filtraPrimos(int x[]) {
         // Var declarations

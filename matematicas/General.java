@@ -19,7 +19,8 @@ package matematicas;
  * juntaNumeros: Pega dos números para formar uno
  * pasaADecimal: Pasa un número de cualquier base a decimal
  * pasaDeDecimal: Pasa un número de decimal a otra base
- * convierteEnPalotes Convierte en a base Palotes el número pasado
+ * convierteEnPalotes: Convierte en a base Palotes el número pasado
+ * convierteEnMorse: Convierte el número n al sistema Morse y lo devuelve en una cadena de caracteres
  * 
   */
 
@@ -37,7 +38,7 @@ public class General {
      * esCapicua: Devuelve verdadero si el número que se pasa como parámetro es
      * capicúa y falso en caso contrario.
      *
-     * @param int x
+     * @param x Número a comprobar si es capicúa
      * @return boolean
      */
     public static boolean esCapicua(int x) {
@@ -49,8 +50,8 @@ public class General {
      * esPrimo: Devuelve verdadero si el número que se pasa como parámetro es primo
      * y falso en caso contrario.
      *
-     * @param int x
-     * @return boolean
+     * @param x Número a comprobar
+     * @return Booleano indicando si es primo
      */
     public static boolean esPrimo(int x) {
         // Process
@@ -67,8 +68,8 @@ public class General {
      * siguientePrimo: Devuelve el menor primo que es mayor al número que se pasa
      * como parámetro.
      *
-     * @param int x
-     * @return int x
+     * @param x Número a comprobar
+     * @return Siguiente número primo encontrado
      */
     public static int siguientePrimo(int x) {
         // Var declaration
@@ -83,9 +84,9 @@ public class General {
     /**
      * potencia: Dada una base y un exponente devuelve la potencia.
      *
-     * @param int base
-     * @param int exp
-     * @return int res
+     * @param base Base
+     * @param exp  Exponente
+     * @return Potencia de base por exponente
      */
     public static double potencia(int base, int exp) {
         // Var declarations
@@ -103,8 +104,8 @@ public class General {
     /**
      * digitos: Cuenta el número de dígitos de un número entero.
      *
-     * @param int x
-     * @return int res
+     * @param x Número inicial
+     * @return Número de dígitos del número pasado
      */
     public static int digitos(int x) {
         // Var declarations
@@ -122,8 +123,8 @@ public class General {
     /**
      * voltea: le da la vuelta a un número
      *
-     * @param int x
-     * @return int res
+     * @param x Número inicial
+     * @return Número volteado
      */
     public static int voltea(int x) {
         // Var declarations
@@ -143,9 +144,9 @@ public class General {
      * digitoN: Devuelve el dígito que está en la posición n de un número entero. Se
      * empieza contando por el 0 y de izquierda a derecha.
      *
-     * @param int x
-     * @param int n
-     * @return res
+     * @param x Número inicial
+     * @param n Posición
+     * @return Dígito en la posición n
      */
     public static int digitoN(int x, int n) {
         // Var declarations
@@ -165,9 +166,9 @@ public class General {
      * posicionDeDigito: Da la posición de la primera ocurrencia de un dígito
      * dentro de un número entero. Si no se encuentra, devuelve -1.
      *
-     * @param int x
-     * @param int dig
-     * @return int res
+     * @param x   Número inicial
+     * @param dig Dígito a buscar
+     * @return Posición del dígito dig
      */
     public static int posicionDeDigito(int x, int dig) {
         // Var declaration
@@ -186,11 +187,11 @@ public class General {
     }
 
     /**
-     * quitaPorDetras: Le quita a un número n dígitos por detrás (por la derecha).
+     * quitaPorDetras: Le quita a un número n dígitos por detrás
      *
-     * @param int x
-     * @param int n
-     * @return int res
+     * @param x Número inicial
+     * @param n Número de dígitos a quitar
+     * @return Número recortado por detrás
      */
     public static int quitaPorDetras(int x, int n) {
         // Var declarations
@@ -201,11 +202,11 @@ public class General {
     }
 
     /**
-     * quitaPorDelante: Le quita a un número n dígitos por detrás (por la derecha).
+     * quitaPorDelante: Le quita a un número n dígitos por delante
      *
-     * @param int x
-     * @param int n
-     * @return int res
+     * @param x Número inicial
+     * @param n Cantidad de números a cortar por delante
+     * @return Número recortado por delante
      */
     public static int quitaPorDelante(int x, int n) {
         // Var declarations
@@ -219,9 +220,9 @@ public class General {
     /**
      * pegaPorDetras: Añade un dígito a un número por detrás.
      *
-     * @param int x
-     * @param int n
-     * @return int x
+     * @param x Número inicial
+     * @param n Dígito a añadir por detrás
+     * @return Nuevo número con el dígito añadido detrás
      */
     public static int pegaPorDetras(int x, int n) {
         // Process
@@ -235,11 +236,11 @@ public class General {
     }
 
     /**
-     * pegaPorDelantes: Añade un dígito a un número por delante.
+     * pegaPorDelante: Añade un dígito a un número por delante.
      *
-     * @param int x
-     * @param int n
-     * @return int x
+     * @param x Número inicial
+     * @param n Dígito a añadir por delante
+     * @return Nuevo número con el dígito añadido por delante
      */
     public static int pegaPorDelante(int x, int n) {
         // Process
@@ -258,10 +259,10 @@ public class General {
      * trozoDeNumero: Toma como parámetros las posiciones inicial y final dentro
      * de un número y devuelve el trozo correspondiente.
      *
-     * @param int x
-     * @param int nInit
-     * @param int nEnd
-     * @return int res
+     * @param x     Número pasado por parámetro
+     * @param nInit Posición inicial
+     * @param nEnd  Posición final
+     * @return Nuevo trozo de número
      */
     public static int trozoDeNumero(int x, int nInit, int nEnd) {
         // Var declarations
@@ -279,9 +280,9 @@ public class General {
     /**
      * juntaNumeros: Pega dos números para formar uno.
      *
-     * @param int x
-     * @param int n
-     * @return int x & n
+     * @param x Primer número
+     * @param n Segundo número
+     * @return Nuevo número formado por los dos números pasados
      */
     public static int juntaNumeros(int x, int n) {
         // Process
@@ -291,9 +292,9 @@ public class General {
     /**
      * pasaADecimal: Pasa un número de cualquier base a decimal.
      *
-     * @param int x
-     * @param int base
-     * @return int res
+     * @param x    String con el número que se quiere convertir a decimal
+     * @param base Base inicial de la cadena pasada
+     * @return Nuevo número en base decimal
      */
     public static int pasaADecimal(String x, int base) {
         // Var declarations
@@ -335,9 +336,9 @@ public class General {
     /**
      * pasaDeDecimal: Pasa un número de decimal a otra base.
      *
-     * @param int x
-     * @param int base
-     * @return int res
+     * @param x    Número decimal
+     * @param base Base a la que se desea convertir
+     * @return Nuevo número en la base indicada
      */
     public static String pasaDeDecimal(String x, int base) {
         // Var declarations
@@ -358,7 +359,7 @@ public class General {
      * convierteEnPalotes Convierte en un string con base Palotes un número entrado
      * como parámetro
      *
-     * @param int n Número que se quiere convertir a la base Palotes
+     * @param n Número que se quiere convertir a la base Palotes
      * @return String con la cadena palotes
      */
     public static String convierteEnPalotes(int n) {
@@ -383,6 +384,39 @@ public class General {
             if (nLong > 0)
                 res += "-";
         }
+
+        return res;
+    }
+
+    /**
+     * convierteEnMorse: Convierte el número n al sistema Morse y lo devuelve en una
+     * cadena de caracteres.
+     *
+     * @param n Número a convertir
+     * @return String con el número convertido en morse
+     */
+
+    /*
+     * 
+     * 1 .____ 6 _....
+     * 2 ..___ 7 __...
+     * 3 ...__ 8 ___..
+     * 4 ...._ 9 ____.
+     * 5 ..... 0 _____
+     */
+    public static String convierteEnMorse(int n) {
+        // Var declaration
+        String[] code = { "_____", ".____", "..___", "...__","...._", ".....", "_....", "__...", "___..", "____." };
+        int digits;
+        String res;
+
+        // Var init
+        digits = digitos(n);
+        res = "";
+
+        // Process
+        for (int i = 0; i < digits; i++)
+            res += code[digitoN(n, i)];
 
         return res;
     }
