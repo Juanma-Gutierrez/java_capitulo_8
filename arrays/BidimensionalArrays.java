@@ -91,7 +91,9 @@ public class BidimensionalArrays {
         // Var declarations
         int[] resArray;
         // Var init
-        resArray = new int[listArray[i].length];
+        resArray = new int[listArray[0].length];
+        if (i >= listArray.length)
+            return resArray;
         // Process
         for (int j = 0; j < listArray[i].length; j++)
             resArray[j] = listArray[i][j];
@@ -111,6 +113,8 @@ public class BidimensionalArrays {
         int[] resArray;
         // Var init
         resArray = new int[listArray.length];
+        if (j >= listArray[0].length)
+            return resArray;
         // Process
         for (int i = 0; i < listArray.length; i++)
             resArray[i] = listArray[i][j];
@@ -162,9 +166,76 @@ public class BidimensionalArrays {
         int maxCol;
 
         pos = coordenadasEnArrayBiInt(listArray, num);
-        minRow = MyArrays.minimoArrayInt(filaDeArrayBiInt(listArray, pos[0]));
-        maxCol = MyArrays.maximoArrayInt(columnaDeArrayBiInt(listArray, pos[1]));
+        if (pos[0] != -1 && pos[1] != -1) {
+            minRow = MyArrays.minimoArrayInt(filaDeArrayBiInt(listArray, pos[0]));
+            maxCol = MyArrays.maximoArrayInt(columnaDeArrayBiInt(listArray, pos[1]));
+            return (minRow == listArray[pos[0]][pos[1]] && maxCol == listArray[pos[0]][pos[1]]);
+        }
+        return false;
+    }
 
-        return (minRow == listArray[pos[0]][pos[1]] && maxCol == listArray[pos[0]][pos[1]]);
+    /**
+     * diagonal: Devuelve un array que contiene una de las diagonales del
+     * array bidimensional que se pasa como parámetro. Se pasan como parámetros
+     * fila, columna y dirección. La fila y la columna determinan el número que
+     * marcará las dos posibles diagonales dentro del array. La dirección es una
+     * cadena de caracteres que puede ser “nose” o “neso”. La cadena “nose” indica
+     * que se elige la diagonal que va del noroeste hacia el sureste, mientras que
+     * la cadena “neso” indica que se elige la diagonal que va del noreste hacia el
+     * suroeste.
+     *
+     * @param listArray Array bidimensional
+     * @param row       Fila del array
+     * @param col       Columna del array
+     * @param dir       Dirección nose o neso
+     * @return array con los elementos de la diagonal seleccionada
+     */
+    public static int[] diagonal(int[][] listArray, int row, int col, String dir) {
+        // Var declarations
+        int[] diagonal;
+        int[] empty;
+        int counter;
+
+        // Var init
+        empty = new int[1];
+        empty[0] = -1;
+        counter = 0;
+
+        // Errors control
+        if (!dir.equals("nose") && !dir.equals("neso"))
+            return empty;
+        if (row >= listArray.length || col >= listArray[0].length)
+            return empty;
+
+        // Process
+        // Calculamos la longitud de la diagonal
+        if (dir.equals("nose"))
+            for (int i = 0; i < listArray.length; i++)
+                for (int j = 0; j < listArray[0].length; j++) {
+                    if ((i - j) == (row - col))
+                        counter++;
+                }
+        if (dir.equals("neso"))
+            for (int i = 0; i < listArray.length; i++)
+                for (int j = 0; j < listArray[0].length; j++) {
+                    if ((j - i) == (col - row))
+                        counter++;
+                }
+        // Procesamos
+        diagonal = new int[counter];
+        counter = 0;
+        if (dir.equals("nose"))
+            for (int i = 0; i < listArray.length; i++)
+                for (int j = 0; j < listArray[0].length; j++) {
+                    if ((i - j) == (row - col))
+                        diagonal[counter++] = listArray[i][j];
+                }
+        if (dir.equals("neso"))
+            for (int i = 0; i < listArray.length; i++)
+                for (int j = 0; j < listArray[0].length; j++) {
+                    if ((j - i) == (col - row))
+                        diagonal[counter++] = listArray[i][j];
+                }
+        return diagonal;
     }
 }
