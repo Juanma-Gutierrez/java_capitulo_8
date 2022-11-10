@@ -7,8 +7,8 @@
  */
 
 /*
- * Crea la función de manejo de arrays que tenga la siguiente cabecera y que
- * haga lo que se especifica en los comentarios (puedes incluirla en tu propia
+* Crea la función de manejo de arrays que tenga la siguiente cabecera y que
+* haga lo que se especifica en los comentarios (puedes incluirla en tu propia
  * biblioteca de rutinas):
  *
  * public static int[] filtraPrimos(int x[]) // Devuelve un array con todos los
@@ -27,6 +27,20 @@
  * x, se devuelve un array con el número -1 como único elemento.
  */
 
+import arrays.MyArrays;
+
 public class Ejercicio36 {
+    public static void main(String[] args) {
+        // Var declarations
+        int[] listArray;
+
+        // Process
+        listArray = MyArrays.generaArrayInt(100, 0, 100);
+        System.out.println("\nEl array creado es el siguiente:");
+        MyArrays.imprimeArray(listArray);
+        System.out.println("\nLos primos encontrados en el array son:");
+        MyArrays.imprimeArray(MyArrays.filtraPrimos(listArray));
+
+    }
 
 }

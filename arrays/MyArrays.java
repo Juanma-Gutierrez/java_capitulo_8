@@ -24,6 +24,8 @@ package arrays;
  *          https://github.com/Juanma-Gutierrez
  */
 
+import matematicas.General;
+
 public class MyArrays {
     /**
      * imprimeArrayInt: Imprime un array por pantalla
@@ -240,8 +242,22 @@ public class MyArrays {
         int[] res;
         int count;
 
-        // Comprobar el número de primos que se encuentran en el array
+        // Var init
+        count = 0;
 
+        // Comprobar el número de primos que se encuentran en el array
+        for (int i = 0; i < x.length; i++) {
+            if (General.esPrimo(x[i]))
+                count++;
+        }
+        res = new int[count];
+        count = 0;
+
+        // Introducir en res los primos encontrados
+        for (int i = 0; i < x.length; i++) {
+            if (General.esPrimo(x[i]))
+                res[count++] = x[i];
+        }
         return res;
 
     }
