@@ -90,10 +90,17 @@ public class BidimensionalArrays {
     public static int[] filaDeArrayBiInt(int[][] listArray, int i) {
         // Var declarations
         int[] resArray;
+        int[] empty;
+
         // Var init
+        empty = new int[1];
+        empty[0] = -1;
         resArray = new int[listArray[0].length];
+
+        // error control
         if (i >= listArray.length)
-            return resArray;
+            return empty;
+
         // Process
         for (int j = 0; j < listArray[i].length; j++)
             resArray[j] = listArray[i][j];
@@ -111,10 +118,17 @@ public class BidimensionalArrays {
     public static int[] columnaDeArrayBiInt(int[][] listArray, int j) {
         // Var declarations
         int[] resArray;
+        int[] empty;
+
         // Var init
+        empty = new int[1];
+        empty[0] = -1;
         resArray = new int[listArray.length];
-        if (j >= listArray[0].length)
-            return resArray;
+
+        // error control
+        if (j >= listArray.length)
+            return empty;
+
         // Process
         for (int i = 0; i < listArray.length; i++)
             resArray[i] = listArray[i][j];
@@ -193,8 +207,8 @@ public class BidimensionalArrays {
     public static int[] diagonal(int[][] listArray, int row, int col, String dir) {
         // Var declarations
         int[] diagonal;
-        int[] empty;
         int counter;
+        int[] empty;
 
         // Var init
         empty = new int[1];
@@ -218,22 +232,24 @@ public class BidimensionalArrays {
         if (dir.equals("neso"))
             for (int i = 0; i < listArray.length; i++)
                 for (int j = 0; j < listArray[0].length; j++) {
-                    if ((j - i) == (col - row))
+                    if ((i + j) == (row + col))
                         counter++;
                 }
         // Procesamos
         diagonal = new int[counter];
         counter = 0;
+        // nose diagonal
         if (dir.equals("nose"))
             for (int i = 0; i < listArray.length; i++)
                 for (int j = 0; j < listArray[0].length; j++) {
                     if ((i - j) == (row - col))
                         diagonal[counter++] = listArray[i][j];
                 }
+        // neso diagonal
         if (dir.equals("neso"))
             for (int i = 0; i < listArray.length; i++)
                 for (int j = 0; j < listArray[0].length; j++) {
-                    if ((j - i) == (col - row))
+                    if ((j + i) == (row + col))
                         diagonal[counter++] = listArray[i][j];
                 }
         return diagonal;
