@@ -265,4 +265,40 @@ public class MyArrays {
         }
         return res;
     }
+
+    /**
+     * filtraCapicuas: Devuelve un array con todos los números capicúa encontrados
+     * en el array pasado
+     *
+     * @param x Array a comprobar
+     * @return Array con los capicúa encontrados
+     */
+    public static int[] filtraCapicuas(int x[]) {
+        // Var declarations
+        int[] res;
+        int count;
+
+        // Var init
+        count = 0;
+
+        // Comprobar el número de capicúas que se encuentran en el array
+        for (int i = 0; i < x.length; i++) {
+            if (General.esCapicua(x[i]))
+                count++;
+        }
+        if (count > 0) {
+            res = new int[count];
+            count = 0;
+
+            // Introducir en res los capicúa encontrados
+            for (int i = 0; i < x.length; i++) {
+                if (General.esCapicua(x[i]))
+                    res[count++] = x[i];
+            }
+        } else {
+            res = new int[1];
+            res[0] = -1;
+        }
+        return res;
+    }
 }
