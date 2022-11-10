@@ -250,15 +250,19 @@ public class MyArrays {
             if (General.esPrimo(x[i]))
                 count++;
         }
-        res = new int[count];
-        count = 0;
+        if (count > 0) {
+            res = new int[count];
+            count = 0;
 
-        // Introducir en res los primos encontrados
-        for (int i = 0; i < x.length; i++) {
-            if (General.esPrimo(x[i]))
-                res[count++] = x[i];
+            // Introducir en res los primos encontrados
+            for (int i = 0; i < x.length; i++) {
+                if (General.esPrimo(x[i]))
+                    res[count++] = x[i];
+            }
+        } else {
+            res = new int[1];
+            res[0] = -1;
         }
         return res;
-
     }
 }
