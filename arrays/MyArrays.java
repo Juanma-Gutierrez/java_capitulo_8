@@ -301,4 +301,45 @@ public class MyArrays {
         }
         return res;
     }
+
+    /**
+     * filtraCon7: Devuelve un array con todos los números que contienen el 7 (por
+     * ej. 7, 27, 782) que se encuentren en otro array que se pasa como parámetro.
+     * El tamaño del array que se devuelve será menor o igual al que se pasa como
+     * parámetro.
+     *
+     * @param x Array de números enteros
+     * @return Array con los números que tienen 7 encontrados en el array inicial
+     */
+
+    public static int[] filtraCon7(int x[]) {
+        // Var declarations
+        int[] res;
+        int count;
+
+        // Var init
+        count = 0;
+
+        // Comprobar la cantidad de números con 7 que se encuentran en el array
+        for (int i = 0; i < x.length; i++) {
+            if (General.posicionDeDigito(x[i], 7) != -1)
+                count++;
+        }
+        if (count > 0) {
+            res = new int[count];
+            count = 0;
+
+            // Introducir en res los números con 7 encontrados
+            for (int i = 0; i < x.length; i++) {
+                if (General.posicionDeDigito(x[i], 7) != -1) {
+                    res[count++] = x[i];
+                }
+            }
+        } else {
+            res = new int[1];
+            res[0] = -1;
+        }
+        return res;
+
+    }
 }

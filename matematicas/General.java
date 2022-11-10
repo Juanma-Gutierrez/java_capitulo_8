@@ -443,11 +443,12 @@ public class General {
 
         // Process
         for (int i = 0; i < digits; i++)
-            if (i != digits - 1)
-                res += code[digitoN(n, i)] + ", ";
+            if (i != 0)
+                res += ", " + code[digitoN(n, i)];
             else
                 res += code[digitoN(n, i)];
 
         return res;
     }
+
 }
