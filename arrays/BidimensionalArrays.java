@@ -223,35 +223,26 @@ public class BidimensionalArrays {
 
         // Process
         // Calculamos la longitud de la diagonal
-        if (dir.equals("nose"))
-            for (int i = 0; i < listArray.length; i++)
-                for (int j = 0; j < listArray[0].length; j++) {
+        for (int i = 0; i < listArray.length; i++)
+            for (int j = 0; j < listArray[0].length; j++) {
+                if (dir.equals("nose")) {
                     if ((i - j) == (row - col))
                         counter++;
-                }
-        if (dir.equals("neso"))
-            for (int i = 0; i < listArray.length; i++)
-                for (int j = 0; j < listArray[0].length; j++) {
-                    if ((i + j) == (row + col))
-                        counter++;
-                }
+                } else if ((i + j) == (row + col))
+                    counter++;
+            }
+
         // Procesamos
         diagonal = new int[counter];
         counter = 0;
-        // nose diagonal
-        if (dir.equals("nose"))
-            for (int i = 0; i < listArray.length; i++)
-                for (int j = 0; j < listArray[0].length; j++) {
+        for (int i = 0; i < listArray.length; i++)
+            for (int j = 0; j < listArray[0].length; j++) {
+                if (dir.equals("nose")) {
                     if ((i - j) == (row - col))
                         diagonal[counter++] = listArray[i][j];
-                }
-        // neso diagonal
-        if (dir.equals("neso"))
-            for (int i = 0; i < listArray.length; i++)
-                for (int j = 0; j < listArray[0].length; j++) {
-                    if ((j + i) == (row + col))
-                        diagonal[counter++] = listArray[i][j];
-                }
+                } else if ((j + i) == (row + col))
+                    diagonal[counter++] = listArray[i][j];
+            }
         return diagonal;
     }
 }
