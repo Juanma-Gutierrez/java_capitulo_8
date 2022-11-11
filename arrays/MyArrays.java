@@ -357,4 +357,26 @@ public class MyArrays {
             res += a[i];
         return res;
     }
+
+    /**
+     * concatena: Concatena dos arrays introducidos y devuelve un array con el
+     * resultado
+     *
+     * @param array1 Primer array
+     * @param array2 Segundo array
+     * @return array con la concatenación de array1+array2
+     */
+    public static int[] concatena(int[] a, int[] b) {
+        // Var declarations
+        int[] res;
+
+        // Var init
+        res = new int[a.length + b.length];
+
+        for (int i = 0; i < a.length; i++)
+            res[i] = a[i];
+        for (int i = a.length; i < (a.length + b.length); i++)
+            res[i] = b[i - a.length];
+        return res;
+    }
 }
