@@ -20,6 +20,7 @@ package arrays;
  * convierteArrayEnString: toma un array de enteros y lo devuelve en una cadena
  * concatena: Concatena dos arrays introducidos y lo devuelve en un array
  * repeticionesDelAnterior: Devuelve las repeticiones de cada número pasado
+ * mezcla: Mezcla dos arrays de forma alternativa par-impar
  */
 
 /**
@@ -417,4 +418,52 @@ public class MyArrays {
         res += count + digit;
         return res;
     }
+
+    /**
+     * mezcla: Mezcla dos arrays de forma alterna
+     *
+     * @param a Primer array
+     * @param b Primer array
+     * @return Array nuevo con la mezcla realizada
+     */
+    public static int[] mezcla(int[] a, int[] b) {
+        // Var declarations
+        int[] res;
+        int countA;
+        int countB;
+        boolean odd;
+
+        countA = 0;
+        countB = 0;
+        res = new int[a.length + b.length];
+        odd = true;
+
+        for (int i = 0; i < res.length; i++) {
+            if (odd) {
+                if (countA < a.length) {
+                    res[i] = a[countA++];
+                    if (countB < b.length)
+                        odd = false;
+                }
+            } else {
+                if (countB < b.length) {
+                    res[i] = b[countB++];
+                    if (countA < a.length)
+                        odd = true;
+                }
+            }
+        }
+        return res;
+    }
 }
+
+/*
+ * if (countA < a.length) {
+ * if (i % 2 == 0 || countB >= b.length)
+ * res[i] = a[countA++];
+ * }
+ * if (countB < b.length) {
+ * if (i % 2 != 0 || countA >= a.length)
+ * res[i] = b[countB++];
+ * }
+ */
