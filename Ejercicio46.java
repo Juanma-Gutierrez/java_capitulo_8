@@ -57,12 +57,11 @@ public class Ejercicio46 {
         // Process
         for (int i = 0; i < height; i++) {
             General.imprimeLinea(i, charac, true);
-            General.imprimeLinea(height - i, " ", false);
-            General.imprimeLinea(height - i, " ", false);
+            General.imprimeLinea((height - i) * 2, " ", false);
             General.imprimeLinea(i, charac, true);
             System.out.println();
         }
-        General.imprimeLinea(height*2, charac, false);
+        General.imprimeLinea(height * 2, charac, false);
 
         // Close scanner
         sc.close();

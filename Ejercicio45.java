@@ -57,8 +57,7 @@ public class Ejercicio45 {
         // Process
         for (int i = 0; i <= height; i++) {
             General.imprimeLinea(i, charac, false);
-            General.imprimeLinea(height - i, " ", false);
-            General.imprimeLinea(height - i, " ", false);
+            General.imprimeLinea((height - i) * 2, " ", false);
             General.imprimeLinea(i, charac, false);
             System.out.println();
         }
