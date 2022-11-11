@@ -468,7 +468,6 @@ public class General {
             else
                 System.out.print(" ");
         }
-        System.out.println();
     }
 
 }
