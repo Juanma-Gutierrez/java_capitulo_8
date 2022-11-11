@@ -340,6 +340,21 @@ public class MyArrays {
             res[0] = -1;
         }
         return res;
+    }
 
+    /**
+     * convierteArrayEnString: toma un array de enteros y lo devuelve en una cadena
+     * de caracteres
+     *
+     * @param listArray Array de números enteros
+     * @return String con el array convertido en cadena de caracteres
+     */
+    public static String convierteArrayEnString(int[] a) {
+        // Var declarations
+        String res;
+        res = "";
+        for (int i = 0; i < a.length; i++)
+            res += a[i];
+        return res;
     }
 }
