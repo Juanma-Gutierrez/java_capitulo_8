@@ -379,4 +379,36 @@ public class MyArrays {
             res[i] = b[i - a.length];
         return res;
     }
+
+    /**
+     * repeticionesDelAnterior: Lock and say: devuelve las repeticiones de cada
+     * número pasado
+     *
+     * @param num Número para comprobar
+     * @return String con la nueva numeración
+     */
+    public static String repeticionesDelAnterior(String num) {
+        // Var declaration
+        String res;
+        int count;
+        String digit;
+
+        // Var init
+        res = "";
+        count = 0;
+        digit = num.substring(0, 1);
+
+        for (int i = 0; i < num.length(); i++) {
+            if (num.substring(i, i + 1).equals(digit)) {
+                count++;
+            } else {
+                res += count + digit;
+                digit = num.substring(i, i + 1);
+                count = 1;
+            }
+        }
+        // Last digits
+        res += count + digit;
+        return res;
+    }
 }
