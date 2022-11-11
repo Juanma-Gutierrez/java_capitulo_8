@@ -14,6 +14,12 @@ package arrays;
  * rotaIzquierdaArrayInt: Rota n posiciones a la izquierda los números de un
  * array
  * filtraPrimos: Devuelve un array con los primos del array pasado por parámetro
+ * filtraCapicuas: Devuelve un array con todos los números capicúa encontrados
+     * en el array pasado
+ * filtraCon7: Devuelve un array con todos los números que contienen el 7
+ * convierteArrayEnString: toma un array de enteros y lo devuelve en una cadena
+ * concatena: Concatena dos arrays introducidos y lo devuelve en un array
+ * repeticionesDelAnterior: Devuelve las repeticiones de cada número pasado
  */
 
 /**

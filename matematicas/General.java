@@ -21,7 +21,8 @@ package matematicas;
  * pasaDeDecimal: Pasa un número de decimal a otra base
  * convierteEnPalotes: Convierte en a base Palotes el número pasado
  * convierteEnMorse: Convierte el número n al sistema Morse y lo devuelve en una cadena de caracteres
- * 
+ * convierteEnPalabras: Convierte los dígitos del número n en palabras
+ * imprimeLinea: Imprime una línea con los caracteres indicados, rellena o bordes en función del parámetro de entrada
   */
 
 /**
@@ -452,7 +453,8 @@ public class General {
     }
 
     /**
-     * Función que realiza
+     * imprimeLinea: Imprime una línea con los caracteres indicados, rellena o
+     * bordes en función del parámetro de entrada
      *
      * @param x Tamaño de la línea
      * @param c Carácter a imprimir
