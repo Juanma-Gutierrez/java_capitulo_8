@@ -55,8 +55,10 @@ public class Ejercicio41 {
         charac = sc.nextLine();
 
         // Process
-        for (int i = height; i > 0; i--)
+        for (int i = height; i > 0; i--){
             General.imprimeLinea(i, charac, false);
+            System.out.println();
+        }
 
         // Close scanner
         sc.close();
