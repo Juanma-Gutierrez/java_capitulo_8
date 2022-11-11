@@ -451,4 +451,24 @@ public class General {
         return res;
     }
 
+    /**
+     * Función que realiza
+     *
+     * @param x Tamaño de la línea
+     * @param c Carácter a imprimir
+     * @param t Bordes de línea solamente, true: bordes; false: rellena
+     * @return void imprime la línea solicitada
+     */
+    public static void imprimeLinea(int x, String c, boolean t) {
+        for (int i = 0; i < x; i++) {
+            if (t == false)
+                System.out.print(c);
+            else if (i == 0 || i == (x - 1))
+                System.out.print(c);
+            else
+                System.out.print(" ");
+        }
+        System.out.println();
+    }
+
 }
