@@ -51,8 +51,11 @@ public class Ejercicio42 {
 
         // Process
         General.imprimeLinea(height, charac, false);
-        for (int i = height - 1; i > 0; i--)
+        System.out.println();
+        for (int i = height - 1; i > 0; i--) {
             General.imprimeLinea(i, charac, true);
+            System.out.println();
+        }
 
         // Close scanner
         sc.close();
