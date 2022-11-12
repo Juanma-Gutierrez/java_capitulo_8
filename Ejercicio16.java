@@ -16,6 +16,9 @@ public class Ejercicio16 {
     public static void main(String[] args) {
         for (int i = 1; i < 100000; i++)
             if (General.esCapicua(i))
-                System.out.print(i + ", ");
+                if (i == 1)
+                    System.out.print(i);
+                else
+                    System.out.print(", " + i);
     }
 }

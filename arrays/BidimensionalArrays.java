@@ -29,9 +29,8 @@ public class BidimensionalArrays {
      */
     public static void printBiArray(int listArray[][]) {
         for (int i = 0; i < listArray.length; i++) {
-            for (int j = 0; j < listArray[i].length; j++) {
+            for (int j = 0; j < listArray[i].length; j++)
                 System.out.printf("%5d", listArray[i][j]);
-            }
             System.out.println();
         }
     }
@@ -200,25 +199,23 @@ public class BidimensionalArrays {
         // Process
         // Calculamos la longitud de la diagonal
         for (int i = 0; i < listArray.length; i++)
-            for (int j = 0; j < listArray[0].length; j++) {
+            for (int j = 0; j < listArray[0].length; j++)
                 if (dir.equals("nose")) {
                     if ((i - j) == (row - col))
                         counter++;
                 } else if ((i + j) == (row + col))
                     counter++;
-            }
 
         // Procesamos
         diagonal = new int[counter];
         counter = 0;
         for (int i = 0; i < listArray.length; i++)
-            for (int j = 0; j < listArray[0].length; j++) {
+            for (int j = 0; j < listArray[0].length; j++)
                 if (dir.equals("nose")) {
                     if ((i - j) == (row - col))
                         diagonal[counter++] = listArray[i][j];
                 } else if ((j + i) == (row + col))
                     diagonal[counter++] = listArray[i][j];
-            }
         return diagonal;
     }
 }

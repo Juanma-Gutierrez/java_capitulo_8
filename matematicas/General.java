@@ -59,10 +59,9 @@ public class General {
         // Process
         if (x < 2)
             return false;
-        for (int i = 2; i <= x / 2; i++) {
+        for (int i = 2; i <= x / 2; i++)
             if (x % i == 0)
                 return false;
-        }
         return true;
     }
 
@@ -157,9 +156,8 @@ public class General {
         res = 0;
         // Process
         x = voltea(x);
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
             x /= 10;
-        }
         res = x % 10;
         return res;
     }

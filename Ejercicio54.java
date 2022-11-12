@@ -42,7 +42,6 @@ public class Ejercicio54 {
         listArray = new int[10];
         listArray = MyArrays.generaArrayInt(10, 100, 999);
         num = (int) (Math.random() * (100000 - 99) + 1);
-
         System.out.println("Número generado:" + num);
         System.out.println("Array generado:");
         MyArrays.imprimeArray(listArray);
@@ -50,6 +49,5 @@ public class Ejercicio54 {
         System.out.println("Ocurrencias de " + dig + " en el número " + num + ": " + General.ocurrencias(dig, num));
         System.out
                 .println("Ocurrencias de " + dig + " en el array: " + MyArrays.ocurrencias(dig, listArray));
-
     }
 }

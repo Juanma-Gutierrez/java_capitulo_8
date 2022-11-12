@@ -42,18 +42,20 @@ public class Ejercicio50 {
         listArrayEven = MyArrays.generaArrayInt(size, 0, 50);
         System.out.println("\nPrimer array: ");
         MyArrays.imprimeArray(listArrayEven);
+
         System.out.print("Introduce el tamaño del segundo array: ");
         size = sc.nextInt();
         listArrayOdd = new int[size];
         listArrayOdd = MyArrays.generaArrayInt(size, 0, 50);
         System.out.println("\nSegundo array: ");
         MyArrays.imprimeArray(listArrayOdd);
-        res = new int[listArrayEven.length + listArrayOdd.length];
 
+        res = new int[listArrayEven.length + listArrayOdd.length];
         res = MyArrays.mezcla(listArrayEven, listArrayOdd);
 
         System.out.println("\nArray resultado: ");
         MyArrays.imprimeArray(res);
+
         // Close scanner
         sc.close();
     }

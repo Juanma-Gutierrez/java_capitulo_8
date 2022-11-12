@@ -37,5 +37,4 @@ public class Ejercicio38 {
         System.out.println("\nLos capicúa encontrados en el array son:");
         MyArrays.imprimeArray(MyArrays.filtraCapicuas(listArray));
     }
-
 }

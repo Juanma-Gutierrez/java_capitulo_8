@@ -23,7 +23,6 @@ public class Ejercicio52 {
 
         listArray = new int[3];
         listArray = MyArrays.generaArrayInt(5, 100, 999);
-
         System.out.println("Array generado:");
         MyArrays.imprimeArray(listArray);
 

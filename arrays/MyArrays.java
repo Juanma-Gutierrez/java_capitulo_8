@@ -196,10 +196,9 @@ public class MyArrays {
      */
     public static boolean estaEnArrayInt(int[] listArray, int num) {
         // Process
-        for (int n : listArray) {
+        for (int n : listArray)
             if (n == num)
                 return true;
-        }
         return false;
     }
 
@@ -216,12 +215,11 @@ public class MyArrays {
         int count;
         // Var init
         count = 0;
-        for (int n : listArray) {
+        for (int n : listArray)
             if (n == num)
                 return count;
             else
                 count++;
-        }
         return -1;
     }
 
@@ -239,9 +237,8 @@ public class MyArrays {
         // Process
         count = listArray.length;
         reverseArray = listArray.clone();
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++)
             reverseArray[count - i - 1] = listArray[i];
-        }
         return reverseArray;
     }
 
@@ -310,14 +307,13 @@ public class MyArrays {
         count = 0;
 
         // Comprobar el número de primos que se encuentran en el array
-        for (int i = 0; i < x.length; i++) {
+        for (int i = 0; i < x.length; i++)
             if (General.esPrimo(x[i]))
                 count++;
-        }
+
         if (count > 0) {
             res = new int[count];
             count = 0;
-
             // Introducir en res los primos encontrados
             for (int i = 0; i < x.length; i++) {
                 if (General.esPrimo(x[i]))
@@ -346,14 +342,13 @@ public class MyArrays {
         count = 0;
 
         // Comprobar el número de capicúas que se encuentran en el array
-        for (int i = 0; i < x.length; i++) {
+        for (int i = 0; i < x.length; i++)
             if (General.esCapicua(x[i]))
                 count++;
-        }
+
         if (count > 0) {
             res = new int[count];
             count = 0;
-
             // Introducir en res los capicúa encontrados
             for (int i = 0; i < x.length; i++) {
                 if (General.esCapicua(x[i]))
@@ -385,14 +380,13 @@ public class MyArrays {
         count = 0;
 
         // Comprobar la cantidad de números con 7 que se encuentran en el array
-        for (int i = 0; i < x.length; i++) {
+        for (int i = 0; i < x.length; i++)
             if (General.posicionDeDigito(x[i], 7) != -1)
                 count++;
-        }
+
         if (count > 0) {
             res = new int[count];
             count = 0;
-
             // Introducir en res los números con 7 encontrados
             for (int i = 0; i < x.length; i++) {
                 if (General.posicionDeDigito(x[i], 7) != -1) {
@@ -462,15 +456,15 @@ public class MyArrays {
         count = 0;
         digit = num.substring(0, 1);
 
-        for (int i = 0; i < num.length(); i++) {
-            if (num.substring(i, i + 1).equals(digit)) {
+        for (int i = 0; i < num.length(); i++)
+            if (num.substring(i, i + 1).equals(digit))
                 count++;
-            } else {
+            else {
                 res += count + digit;
                 digit = num.substring(i, i + 1);
                 count = 1;
             }
-        }
+
         // Last digits
         res += count + digit;
         return res;
@@ -597,10 +591,9 @@ public class MyArrays {
 
         for (int i = 0; i < s.length; i++) {
             rep = false;
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++)
                 if (s[i].equals(s[j]) && i != j)
                     rep = true;
-            }
             if (!rep)
                 counter++;
         }
@@ -610,10 +603,9 @@ public class MyArrays {
 
         for (int i = 0; i < s.length; i++) {
             rep = false;
-            for (int j = 0; j < i; j++) {
+            for (int j = 0; j < i; j++)
                 if (s[i].equals(s[j]) && i != j)
                     rep = true;
-            }
             if (!rep)
                 res[counter++] = s[i];
         }
@@ -638,22 +630,17 @@ public class MyArrays {
         counter = 0;
 
         // Top row
-        for (int j = 0; j < n[0].length; j++) {
+        for (int j = 0; j < n[0].length; j++)
             resArray[counter++] = n[0][j];
-        }
         // Right column
-        for (int i = 1; i < n.length; i++) {
+        for (int i = 1; i < n.length; i++)
             resArray[counter++] = n[i][n[0].length - 1];
-        }
         // Bottom row
-        for (int j = n[0].length - 2; j >= 0; j--) {
+        for (int j = n[0].length - 2; j >= 0; j--)
             resArray[counter++] = n[n.length - 1][j];
-        }
         // Left column
-        for (int i = n.length - 2; i > 0; i--) {
+        for (int i = n.length - 2; i > 0; i--)
             resArray[counter++] = n[i][0];
-        }
-
         return resArray;
     }
 }

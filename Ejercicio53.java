@@ -45,7 +45,6 @@ public class Ejercicio53 {
 
         for (int i = 0; i < listArray.length; i++)
             listArray[i] = MyArrays.generaArrayInt(listArray[i].length, 100, 999);
-
         System.out.println("Array generado:");
         MyArrays.imprimeArray(listArray);
 

@@ -49,16 +49,14 @@ public class Ejercicio49 {
         resArray = new String[size];
         resArray[0] = "1";
 
-        for (int i = 1; i < size; i++) {
+        for (int i = 1; i < size; i++)
             resArray[i] = MyArrays.repeticionesDelAnterior(resArray[i - 1]);
-        }
 
-        for (int i = 0; i < resArray.length; i++) {
+        for (int i = 0; i < resArray.length; i++)
             if (i == 0)
                 System.out.print(resArray[i]);
             else
                 System.out.print(", " + resArray[i]);
-        }
 
         // Close scanner
         sc.close();

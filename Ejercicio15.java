@@ -15,9 +15,11 @@ import matematicas.General;
 public class Ejercicio15 {
     public static void main(String[] args) {
         // Process
-        for (int i = 1; i <= 1000; i++) {
+        for (int i = 1; i <= 1000; i++)
             if (General.esPrimo(i))
-                System.out.printf(i + ", ");
-        }
+                if (i == 2)
+                    System.out.print(i);
+                else
+                    System.out.print(", " + i);
     }
 }

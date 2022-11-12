@@ -27,7 +27,6 @@ public class Ejercicio19 {
 
         // Input data
         do {
-
             System.out.println("Por favor, Introduzca la base inicial:");
             System.out.println("2: Binario");
             System.out.println("8: Octal");

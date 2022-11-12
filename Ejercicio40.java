@@ -35,5 +35,4 @@ public class Ejercicio40 {
         System.out.println("\nLos números con 7 encontrados en el array son:");
         MyArrays.imprimeArray(MyArrays.filtraCon7(listArray));
     }
-
 }
