@@ -2,8 +2,8 @@ package arrays;
 /*
  * Lista de funciones de la biblioteca MyArrays:
  *
- * imprimeArray: Imprime un array por pantalla
- * imprimeBiArray: Imprime un array bidimensional por pantalla
+ * imprimeArray: []   Imprime un array por pantalla
+ *               [][] Imprime un array bidimensional por pantalla
  * generaArrayInt: Genera un array de tamaño n con números aleatorios
  * minimoArrayInt: Devuelve el mínimo del array que se pasa como parámetro
  * maximoArrayInt: Devuelve el máximo del array que se pasa como parámetro
@@ -55,7 +55,7 @@ public class MyArrays {
      * @param listArray Array bidimensional de números enteros
      * @return Sin return, únicamente impresión en pantalla
      */
-    public static void imprimeBiArray(int[][] listArray) {
+    public static void imprimeArray(int[][] listArray) {
         for (int i = 0; i < listArray.length; i++) {
             for (int j = 0; j < listArray[0].length; j++)
                 System.out.print(listArray[i][j] + " ");

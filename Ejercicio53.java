@@ -47,7 +47,7 @@ public class Ejercicio53 {
             listArray[i] = MyArrays.generaArrayInt(listArray[i].length, 100, 999);
 
         System.out.println("Array generado:");
-        MyArrays.imprimeBiArray(listArray);
+        MyArrays.imprimeArray(listArray);
 
         System.out.print(MyArrays.nEsimo(listArray, pos));
     }
