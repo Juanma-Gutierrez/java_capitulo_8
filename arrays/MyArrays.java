@@ -21,6 +21,7 @@ package arrays;
  * concatena: Concatena dos arrays introducidos y lo devuelve en un array
  * repeticionesDelAnterior: Devuelve las repeticiones de cada número pasado
  * mezcla: Mezcla dos arrays de forma alternativa par-impar
+ * aleatorioDeArray: Selecciona un valor aleatorio del array pasdo
  */
 
 /**
@@ -455,15 +456,14 @@ public class MyArrays {
         }
         return res;
     }
-}
 
-/*
- * if (countA < a.length) {
- * if (i % 2 == 0 || countB >= b.length)
- * res[i] = a[countA++];
- * }
- * if (countB < b.length) {
- * if (i % 2 != 0 || countA >= a.length)
- * res[i] = b[countB++];
- * }
- */
+    /**
+     * aleatorioDeArray: Devuelve un número del array aleatoriamente
+     *
+     * @param a Array de números enteros
+     * @return Número entero aleatorio
+     */
+    public static int aleatorioDeArray(int[] a) {
+        return (a[(int) (Math.random() * (a.length))]);
+    }
+}
