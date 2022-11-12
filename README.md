@@ -555,7 +555,16 @@ Utiliza estas funciones en un programa para comprobar que funcionan bien.
 
 ### Ejercicio 55
 
-Realiza una función que tome como parámetro un array de cadenas de caracteres y que devuelva otro array con los mismos valores habiendo eliminado las posibles repeticiones. Se distinguen mayúsculas de minúsculas, por tanto “hola” es distinto de “Hola”. Por ejemplo, si el array a contiene los valores {“casa”, “coche”, “sol”, “mesa”, “mesa”, “coche”, “ordenador”, “sol”, “CASA”}, la sentencia sinRepetir(a) devolvería el array {“casa”, “coche”, “sol”, “mesa”, “ordenador”, “CASA”}. Se debe entregar tanto el código de la función como el código de prueba que la usa. La cabecera de la función es la siguiente:
+Realiza una función que tome como parámetro un array de cadenas de caracteres y que devuelva otro array con los mismos valores habiendo eliminado las posibles repeticiones. Se distinguen mayúsculas de minúsculas, por tanto “hola” es distinto de “Hola”.
+
+```
+Por ejemplo, si el array a contiene los valores:
+{“casa”, “coche”, “sol”, “mesa”, “mesa”, “coche”, “ordenador”, “sol”, “CASA”},
+la sentencia sinRepetir(a) devolvería el array
+{“casa”, “coche”, “sol”, “mesa”, “ordenador”, “CASA”}.
+```
+
+Se debe entregar tanto el código de la función como el código de prueba que la usa. La cabecera de la función es la siguiente:
 
 ```
 public static String[] sinRepetir(String[] s)

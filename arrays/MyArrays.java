@@ -2,8 +2,9 @@ package arrays;
 /*
  * Lista de funciones de la biblioteca MyArrays:
  *
- * imprimeArray: []   Imprime un array por pantalla
- *               [][] Imprime un array bidimensional por pantalla
+ * imprimeArray: []   Imprime un array de enterospor pantalla
+ *               [][] Imprime un array bidimensional de enteros
+ *                    Imprime un array de strings por pantalla
  * generaArrayInt: Genera un array de tamaño n con números aleatorios
  * minimoArrayInt: Devuelve el mínimo del array que se pasa como parámetro
  * maximoArrayInt: Devuelve el máximo del array que se pasa como parámetro
@@ -24,7 +25,8 @@ package arrays;
  * mezcla: Mezcla dos arrays de forma alternativa par-impar
  * aleatorioDeArray: Selecciona un valor aleatorio del array pasado
  * nEsimo: Busca la posición n en un array bidimensional
- * * ocurrencias: Devuelve en número de veces que aparece un dígito en los números de un array
+ * ocurrencias: Devuelve en número de veces que aparece un dígito en los números de un array
+ * sinRepetir: Imprime un array de strings sin los elementos repetidos
  */
 
 /**
@@ -39,7 +41,7 @@ import matematicas.General;
 
 public class MyArrays {
     /**
-     * imprimeArrayInt: Imprime un array por pantalla
+     * imprimeArray: Imprime un array de enteros por pantalla
      *
      * @param listArray Array de números enteros
      * @return Sin return, únicamente impresión en pantalla
@@ -51,7 +53,19 @@ public class MyArrays {
     }
 
     /**
-     * imprimeArrayBiInt: Imprime un array bidimensional por pantalla
+     * imprimeArray: Imprime un array de strings por pantalla
+     *
+     * @param listArray Array de números enteros
+     * @return Sin return, únicamente impresión en pantalla
+     */
+    public static void imprimeArray(String[] listArray) {
+        for (int i = 0; i < listArray.length; i++)
+            System.out.print(listArray[i] + " ");
+        System.out.println();
+    }
+
+    /**
+     * imprimeArray: Imprime un array bidimensional de enteros por pantalla
      *
      * @param listArray Array bidimensional de números enteros
      * @return Sin return, únicamente impresión en pantalla
@@ -534,5 +548,50 @@ public class MyArrays {
             }
         }
         return counter;
+    }
+
+    /**
+     * sinRepetir: Imprime un array de strings sin los elementos repetidos
+     * Se distinguen mayúsculas de minúsculas, por tanto “hola” es distinto de
+     * “Hola”. Por ejemplo, si el array a contiene los valores {“casa”, “coche”,
+     * “sol”, “mesa”, “mesa”, “coche”, “ordenador”, “sol”, “CASA”}, la sentencia
+     * sinRepetir(a) devolvería el array {“casa”, “coche”, “sol”, “mesa”,
+     * “ordenador”, “CASA”}
+     *
+     * @param s Array de strings a elimiar las repeticiones
+     * @return array de strings sin repeticiones
+     */
+    public static String[] sinRepetir(String[] s) {
+        // Var declarations
+        boolean rep;
+        String[] res;
+        int counter;
+
+        // Var init
+        counter = 0;
+
+        for (int i = 0; i < s.length; i++) {
+            rep = false;
+            for (int j = 0; j < i; j++) {
+                if (s[i].equals(s[j]) && i != j)
+                    rep = true;
+            }
+            if (!rep)
+                counter++;
+        }
+
+        res = new String[counter];
+        counter = 0;
+
+        for (int i = 0; i < s.length; i++) {
+            rep = false;
+            for (int j = 0; j < i; j++) {
+                if (s[i].equals(s[j]) && i != j)
+                    rep = true;
+            }
+            if (!rep)
+                res[counter++] = s[i];
+        }
+        return res;
     }
 }
