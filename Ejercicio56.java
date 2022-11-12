@@ -28,6 +28,7 @@
  */
 
 import arrays.MyArrays;
+import java.util.Scanner;
 
 public class Ejercicio56 {
     public static void main(String[] args) {
@@ -37,8 +38,14 @@ public class Ejercicio56 {
         int[][] listArray;
         int[] auxArray;
 
-        row = 7;
-        col = 5;
+        // Scanner class
+        Scanner sc = new Scanner(System.in);
+
+        // Input data
+        System.out.print("Introduce el número de filas: ");
+        row = sc.nextInt();
+        System.out.print("Introduce el número de columnas: ");
+        col = sc.nextInt();
         listArray = new int[row][col];
         listArray = MyArrays.generaArrayInt(row, col, 10, 99);
 
@@ -46,7 +53,10 @@ public class Ejercicio56 {
         MyArrays.imprimeArray(listArray);
 
         auxArray = MyArrays.corteza(listArray);
+        System.out.println("\nResultado:");
         MyArrays.imprimeArray(auxArray);
 
+        // Close scanner
+        sc.close();
     }
 }
