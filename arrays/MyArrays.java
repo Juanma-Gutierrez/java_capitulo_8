@@ -24,6 +24,7 @@ package arrays;
  * mezcla: Mezcla dos arrays de forma alternativa par-impar
  * aleatorioDeArray: Selecciona un valor aleatorio del array pasado
  * nEsimo: Busca la posición n en un array bidimensional
+ * * ocurrencias: Devuelve en número de veces que aparece un dígito en los números de un array
  */
 
 /**
@@ -510,4 +511,28 @@ public class MyArrays {
         return -1;
     }
 
+    /**
+     * ocurrencias: Devuelve en número de veces que aparece un dígito en un número
+     *
+     * @param digito Dígito a buscar en el número
+     * @param n      Número a
+     * @return Número de ocurrencias, 0 si no hay ninguna
+     */
+    public static int ocurrencias(int digito, int[] a) {
+        // Var init
+        int counter;
+        int digitoN;
+        int size;
+        counter = 0;
+        // Process
+        for (int i = 0; i < a.length; i++) {
+            size = General.digitos(a[i]);
+            for (int j = 0; j < size; j++) {
+                digitoN = General.digitoN(a[i], j);
+                if (digito == digitoN)
+                    counter++;
+            }
+        }
+        return counter;
+    }
 }

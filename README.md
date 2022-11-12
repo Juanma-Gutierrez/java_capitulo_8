@@ -545,10 +545,10 @@ La función ocurrencias devuelve el número de veces que aparece un dígito dent
 Ejemplos:
 ocurrencias(8, 4672) devuelve 0
 ocurrencias(5, 25153) devuelve 2
-ocurrencias(2, 123456) devuelve 1 Si a = {714, 81, 9, 11}
-ocurrencias(1, a) devuelve 4 Si a = {42, 13, 12345, 4}
-ocurrencias(4, a) devuelve 3 Si a = {6, 66, 666}
-ocurrencias(6, a) devuelve 6
+ocurrencias(2, 123456) devuelve 1
+Si a = {714, 81, 9, 11} ocurrencias(1, a) devuelve 4
+Si a = {42, 13, 12345, 4} ocurrencias(4, a) devuelve 3
+Si a = {6, 66, 666} ocurrencias(6, a) devuelve 6
 ```
 
 Utiliza estas funciones en un programa para comprobar que funcionan bien.

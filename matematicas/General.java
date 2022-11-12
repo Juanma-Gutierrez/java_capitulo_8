@@ -23,6 +23,7 @@ package matematicas;
  * convierteEnMorse: Convierte el número n al sistema Morse y lo devuelve en una cadena de caracteres
  * convierteEnPalabras: Convierte los dígitos del número n en palabras
  * imprimeLinea: Imprime una línea con los caracteres indicados, rellena o bordes en función del parámetro de entrada
+ * ocurrencias: Devuelve en número de veces que aparece un dígito en un número
   */
 
 /**
@@ -470,5 +471,23 @@ public class General {
             else
                 System.out.print(" ");
         }
+    }
+
+    /**
+     * ocurrencias: Devuelve en número de veces que aparece un dígito en un número
+     *
+     * @param digito Dígito a buscar en el número
+     * @param n      Número a
+     * @return Número de ocurrencias, 0 si no hay ninguna
+     */
+    public static int ocurrencias(int digito, int n) {
+        // Var init
+        int counter;
+        counter = 0;
+        // Process
+        for (int i = 0; i < General.digitos(n); i++)
+            if (digito == General.digitoN(n, i))
+                counter++;
+        return counter;
     }
 }
