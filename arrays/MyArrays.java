@@ -2,7 +2,8 @@ package arrays;
 /*
  * Lista de funciones de la biblioteca MyArrays:
  *
- * imprimeArrayInt: Imprime un array por pantalla
+ * imprimeArray: Imprime un array por pantalla
+ * imprimeBiArray: Imprime un array bidimensional por pantalla
  * generaArrayInt: Genera un array de tamaño n con números aleatorios
  * minimoArrayInt: Devuelve el mínimo del array que se pasa como parámetro
  * maximoArrayInt: Devuelve el máximo del array que se pasa como parámetro
@@ -21,7 +22,8 @@ package arrays;
  * concatena: Concatena dos arrays introducidos y lo devuelve en un array
  * repeticionesDelAnterior: Devuelve las repeticiones de cada número pasado
  * mezcla: Mezcla dos arrays de forma alternativa par-impar
- * aleatorioDeArray: Selecciona un valor aleatorio del array pasdo
+ * aleatorioDeArray: Selecciona un valor aleatorio del array pasado
+ * nEsimo: Busca la posición n en un array bidimensional
  */
 
 /**
@@ -45,6 +47,20 @@ public class MyArrays {
         for (int i = 0; i < listArray.length; i++)
             System.out.print(listArray[i] + " ");
         System.out.println();
+    }
+
+    /**
+     * imprimeArrayBiInt: Imprime un array bidimensional por pantalla
+     *
+     * @param listArray Array bidimensional de números enteros
+     * @return Sin return, únicamente impresión en pantalla
+     */
+    public static void imprimeBiArray(int[][] listArray) {
+        for (int i = 0; i < listArray.length; i++) {
+            for (int j = 0; j < listArray[0].length; j++)
+                System.out.print(listArray[i][j] + " ");
+            System.out.println();
+        }
     }
 
     /**
@@ -434,6 +450,7 @@ public class MyArrays {
         int countB;
         boolean odd;
 
+        // Var init
         countA = 0;
         countB = 0;
         res = new int[a.length + b.length];
@@ -466,4 +483,31 @@ public class MyArrays {
     public static int aleatorioDeArray(int[] a) {
         return (a[(int) (Math.random() * (a.length))]);
     }
+
+    /**
+     * nEsimo: Busca la posición n en un array bidimensional como si estuviera
+     * leyendo el array. Si n no está dentro del array, debe devolver -1.
+     *
+     * @param n        Array de números
+     * @param posicion Posición a buscar
+     * @return Entero con el resultado de la búsqueda
+     */
+    public static int nEsimo(int[][] n, int posicion) {
+        // Var declarations
+        int count;
+
+        // Var init
+        count = 0;
+
+        // Process
+        for (int i = 0; i < n.length; i++) {
+            for (int j = 0; j < n[0].length; j++) {
+                if (count == posicion)
+                    return n[i][j];
+                count++;
+            }
+        }
+        return -1;
+    }
+
 }
