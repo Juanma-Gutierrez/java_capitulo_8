@@ -587,5 +587,5 @@ Por ejemplo, si el array bidimensional a es el que se muestra a continuación:
 98 45 94 11 18 48
 
 El array unidimensional generado por corteza(a) sería el siguiente:
-45 92 14 20 25 78 60 39 48 18 11 94 45 98
+45 92 14 20 25 78 60 39 48 18 11 94 45 98 32 35
 ```

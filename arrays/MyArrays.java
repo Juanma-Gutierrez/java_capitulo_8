@@ -6,6 +6,7 @@ package arrays;
  *               [][] Imprime un array bidimensional de enteros
  *                    Imprime un array de strings por pantalla
  * generaArrayInt: Genera un array de tamaño n con números aleatorios
+ *                 Genera un array bidimensional de row x col con num aleatorios
  * minimoArrayInt: Devuelve el mínimo del array que se pasa como parámetro
  * maximoArrayInt: Devuelve el máximo del array que se pasa como parámetro
  * mediaArrayInt: Devuelve la media del array que se pasa como parámetro
@@ -27,6 +28,7 @@ package arrays;
  * nEsimo: Busca la posición n en un array bidimensional
  * ocurrencias: Devuelve en número de veces que aparece un dígito en los números de un array
  * sinRepetir: Imprime un array de strings sin los elementos repetidos
+ * corteza: Entra un array bidimensional y devuelve los números externos del array
  */
 
 /**
@@ -96,6 +98,29 @@ public class MyArrays {
 
         for (int i = 0; i < n; i++)
             arrayInt[i] = (int) (Math.random() * (max - min + 1) + min);
+        return arrayInt;
+    }
+
+    /**
+     * generaArrayInt: Genera un array bidimensional de tamaño n con números
+     * aleatorios cuyo intervalo (mínimo y máximo) se indica como parámetro.
+     *
+     * @param row Número de filas a crear
+     * @param col Número de columnas a crear
+     * @param min Intervalo mínimo (incluido)
+     * @param max Intervalo máximo (incluido)
+     * @return Array generado
+     */
+    public static int[][] generaArrayInt(int row, int col, int min, int max) {
+        // Var declarations
+        int[][] arrayInt;
+
+        // Var init
+        arrayInt = new int[row][col];
+
+        for (int i = 0; i < row; i++)
+            for (int j = 0; j < col; j++)
+                arrayInt[i][j] = (int) (Math.random() * (max - min + 1) + min);
         return arrayInt;
     }
 
@@ -593,5 +618,42 @@ public class MyArrays {
                 res[counter++] = s[i];
         }
         return res;
+    }
+
+    /**
+     * corteza: Entra un array bidimensional y devuelve los números externos del
+     * array
+     *
+     * @param n Array bidimensional con números enteros
+     * @return Array con los números de la corteza
+     */
+    public static int[] corteza(int[][] n) {
+        // Var declarations
+        int size;
+        int[] resArray;
+        int counter;
+
+        size = (n.length * 2) + ((n[0].length - 2) * 2);
+        resArray = new int[size];
+        counter = 0;
+
+        // Top row
+        for (int j = 0; j < n[0].length; j++) {
+            resArray[counter++] = n[0][j];
+        }
+        // Right column
+        for (int i = 1; i < n.length; i++) {
+            resArray[counter++] = n[i][n[0].length - 1];
+        }
+        // Bottom row
+        for (int j = n[0].length - 2; j >= 0; j--) {
+            resArray[counter++] = n[n.length - 1][j];
+        }
+        // Left column
+        for (int i = n.length - 2; i > 0; i--) {
+            resArray[counter++] = n[i][0];
+        }
+
+        return resArray;
     }
 }
