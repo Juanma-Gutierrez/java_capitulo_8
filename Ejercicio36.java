@@ -27,7 +27,7 @@
  * x, se devuelve un array con el número -1 como único elemento.
  */
 
-import arrays.MyArrays;
+import comp.jgutierr.arrays.MyArrays;
 
 public class Ejercicio36 {
     public static void main(String[] args) {

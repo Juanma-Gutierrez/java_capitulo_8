@@ -23,7 +23,7 @@ array devuelto también estará repetido 3 veces. Si no existe ningún número
 capicúa en x, se devuelve un array con el número -1 como único elemento.
  */
 
-import arrays.MyArrays;
+import comp.jgutierr.arrays.MyArrays;
 
 public class Ejercicio38 {
     public static void main(String[] args) {

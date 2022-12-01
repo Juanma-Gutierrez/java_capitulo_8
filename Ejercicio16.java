@@ -10,7 +10,7 @@
  * Muestra los números capicúa que hay entre 1 y 99999.
  */
 
-import matematicas.General;
+import comp.jgutierr.matematicas.General;
 
 public class Ejercicio16 {
     public static void main(String[] args) {

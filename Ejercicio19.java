@@ -10,7 +10,7 @@
  * Une y amplía los dos programas anteriores de tal forma que se permita convertir un número entre cualquiera de las siguientes bases: decimal, binario, hexadecimal y octal.
  */
 
-import matematicas.General;
+import comp.jgutierr.matematicas.General;
 import java.util.Scanner;
 
 public class Ejercicio19 {

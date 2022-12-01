@@ -26,7 +26,7 @@
  * un array.
  */
 
-import arrays.MyArrays;
+import comp.jgutierr.arrays.MyArrays;
 import java.util.Scanner;
 
 public class Ejercicios20_28 {

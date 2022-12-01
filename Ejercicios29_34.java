@@ -32,8 +32,8 @@
  * suroeste.
  */
 
-import arrays.BidimensionalArrays;
-import arrays.MyArrays;
+import comp.jgutierr.arrays.BidimensionalArrays;
+import comp.jgutierr.arrays.MyArrays;
 import java.util.Scanner;
 
 public class Ejercicios29_34 {

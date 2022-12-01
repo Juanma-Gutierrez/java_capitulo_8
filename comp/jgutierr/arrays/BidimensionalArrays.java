@@ -1,4 +1,4 @@
-package arrays;
+package comp.jgutierr.arrays;
 
 /*
  * Lista de funciones de la biblioteca BidimensionalArray:

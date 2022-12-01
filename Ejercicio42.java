@@ -30,8 +30,8 @@ XX
 X
  */
 
+import comp.jgutierr.matematicas.General;
 import java.util.Scanner;
-import matematicas.General;
 
 public class Ejercicio42 {
     public static void main(String[] args) {

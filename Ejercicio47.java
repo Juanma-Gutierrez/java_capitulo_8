@@ -17,7 +17,7 @@
  * “62501”.
  */
 import java.util.Scanner;
-import arrays.MyArrays;
+import comp.jgutierr.arrays.MyArrays;
 
 public class Ejercicio47 {
     public static void main(String[] args) {

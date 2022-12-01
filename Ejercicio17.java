@@ -10,7 +10,7 @@
  * Escribe un programa que pase de binario a decimal.
  */
 
-import matematicas.General;
+import comp.jgutierr.matematicas.General;
 import java.util.Scanner;
 
 public class Ejercicio17 {

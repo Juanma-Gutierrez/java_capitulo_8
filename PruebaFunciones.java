@@ -24,7 +24,7 @@
  * 14. juntaNumeros: Pega dos números para formar uno.
  */
 
-import matematicas.General;
+import comp.jgutierr.matematicas.General;
 import java.util.Scanner;
 
 public class PruebaFunciones {

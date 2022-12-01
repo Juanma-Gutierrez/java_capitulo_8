@@ -1,4 +1,4 @@
-package matematicas;
+package comp.jgutierr.matematicas;
 
 /*
  * Lista de funciones de la biblioteca General:

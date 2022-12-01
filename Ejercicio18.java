@@ -10,8 +10,8 @@
  * Escribe un programa que pase de decimal a binario.
  */
 
+import comp.jgutierr.matematicas.General;
 import java.util.Scanner;
-import matematicas.General;
 
 public class Ejercicio18 {
     public static void main(String[] args) {

@@ -14,7 +14,7 @@ Por ejemplo, si a = {111, 222, 333, 444}, aleatorioDeArray(a) podría devolver e
 Si b = {52, 37}, aleatorioDeArray(b) podría devolver el 52 o el 37. Utiliza la función en un pro
  */
 
-import arrays.MyArrays;
+import comp.jgutierr.arrays.MyArrays;
 
 public class Ejercicio52 {
     public static void main(String[] args) {

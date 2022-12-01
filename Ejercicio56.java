@@ -27,7 +27,7 @@
  * 45 92 14 20 25 78 60 39 48 18 11 94 45 98 32 35
  */
 
-import arrays.MyArrays;
+import comp.jgutierr.arrays.MyArrays;
 import java.util.Scanner;
 
 public class Ejercicio56 {

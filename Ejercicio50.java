@@ -21,8 +21,8 @@
  * Si a = { } y b = {1, 2, 3}, mezcla(a, b) devuelve {1, 2, 3}
  */
 
+import comp.jgutierr.arrays.MyArrays;
 import java.util.Scanner;
-import arrays.MyArrays;
 
 public class Ejercicio50 {
     public static void main(String[] args) {

@@ -20,7 +20,7 @@ Esta función convierte el número n al sistema Morse y lo devuelve en una caden
 5 ..... 0 _____
  */
 
-import matematicas.General;
+import comp.jgutierr.matematicas.General;
 import java.util.Scanner;
 
 public class Ejercicio37 {

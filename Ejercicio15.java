@@ -10,7 +10,7 @@
  * Muestra los números primos que hay entre 1 y 1000.
  */
 
-import matematicas.General;
+import comp.jgutierr.matematicas.General;
 
 public class Ejercicio15 {
     public static void main(String[] args) {

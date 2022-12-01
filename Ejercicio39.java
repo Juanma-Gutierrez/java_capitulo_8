@@ -13,7 +13,7 @@ Esta función convierte los dígitos del número n en las correspondientes palab
 cuatro, siete, cero, dos, uno, tres
  */
 
-import matematicas.General;
+import comp.jgutierr.matematicas.General;
 import java.util.Scanner;
 
 public class Ejercicio39 {

@@ -15,7 +15,7 @@
  * 9, 0, 1, 2, 3 }.
  */
 
-import arrays.MyArrays;
+import comp.jgutierr.arrays.MyArrays;
 
 public class Ejercicio48 {
     public static void main(String[] args) {

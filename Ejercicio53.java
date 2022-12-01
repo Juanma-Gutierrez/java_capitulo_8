@@ -31,7 +31,7 @@
  * nEsimo(a, 100) devuelve -1
  */
 
-import arrays.MyArrays;
+import comp.jgutierr.arrays.MyArrays;
 
 public class Ejercicio53 {
     public static void main(String[] args) {

@@ -35,8 +35,8 @@ XX  XX
 XXXXXX
  */
 
+import comp.jgutierr.matematicas.General;
 import java.util.Scanner;
-import matematicas.General;
 
 public class Ejercicio45 {
     public static void main(String[] args) {

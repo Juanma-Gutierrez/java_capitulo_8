@@ -30,8 +30,8 @@
  * 11131221133112132113212221, 3113112221232112111312211312113211
  */
 
+import comp.jgutierr.arrays.MyArrays;
 import java.util.Scanner;
-import arrays.MyArrays;
 
 public class Ejercicio49 {
     public static void main(String[] args) {

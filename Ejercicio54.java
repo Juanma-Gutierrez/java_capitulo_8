@@ -26,8 +26,8 @@
  * Si a = {6, 66, 666} ocurrencias(6, a) devuelve 6
  */
 
-import matematicas.General;
-import arrays.MyArrays;
+import comp.jgutierr.matematicas.General;
+import comp.jgutierr.arrays.MyArrays;
 
 public class Ejercicio54 {
     public static void main(String[] args) {

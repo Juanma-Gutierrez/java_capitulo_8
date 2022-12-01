@@ -27,8 +27,8 @@
  * 14 no es primo y no es capicúa.
  */
 
-import arrays.MyArrays;
-import matematicas.General;
+import comp.jgutierr.arrays.MyArrays;
+import comp.jgutierr.matematicas.General;
 
 public class Ejercicio51 {
     public static void main(String[] args) {

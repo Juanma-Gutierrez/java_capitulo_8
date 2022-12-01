@@ -19,7 +19,7 @@
  * principal.
  */
 
-import matematicas.General;
+import comp.jgutierr.matematicas.General;
 import java.util.Scanner;
 
 public class Ejercicio35 {

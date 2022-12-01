@@ -1,4 +1,4 @@
-package arrays;
+package comp.jgutierr.arrays;
 /*
  * Lista de funciones de la biblioteca MyArrays:
  *
@@ -39,7 +39,7 @@ package arrays;
  *          https://github.com/Juanma-Gutierrez
  */
 
-import matematicas.General;
+import comp.jgutierr.matematicas.General;
 
 public class MyArrays {
     /**
