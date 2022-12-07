@@ -134,6 +134,7 @@ public class General {
         // Negatives
         if (exp < 0)
             return 1 / potencia(base, -exp);
+        // Positives
         for (int i = 0; i < exp; i++)
             res *= base;
         return res;
@@ -162,10 +163,13 @@ public class General {
         // Var init
         res = 0;
         // Process
+        // Zero
         if (x == 0)
             return 1;
+        // Negative
         if (x < 0)
             x = -x;
+        // Positive
         do {
             x /= 10;
             res++;
@@ -256,17 +260,14 @@ public class General {
      */
     public static long posicionDeDigito(long x, long dig) {
         // Var declaration
-        long res;
-        // Var init
-        res = 0;
-        // Process
-        x = voltea(x);
+        int longitud = digitos(x);
         do {
-            if (x % 10 == dig)
-                return res;
-            x /= 10;
-            res++;
-        } while (x > 0);
+            int pot = (int) potencia(10, longitud);
+            int num = (int) (x / pot);
+            if (num % 10 == dig)
+                return digitos(x) - longitud - 1;
+            longitud--;
+        } while (longitud > 0);
         return -1;
     }
 
@@ -289,12 +290,8 @@ public class General {
      * @param n Número de dígitos a quitar
      * @return Número recortado por detrás
      */
-    public static long quitaPorDetras(long x, long n) {
-        // Var declarations
-        long res;
-        // Process
-        res = (long) (x / potencia(10, (int) n));
-        return res;
+    public static long quitaPorDetras(long x, int n) {
+        return (long) (x / potencia(10, n));
     }
 
     /**
@@ -305,7 +302,7 @@ public class General {
      * @return Número recortado por detrás
      */
     public static int quitaPorDetras(int x, int n) {
-        return (int) (quitaPorDetras((long) x, (long) n));
+        return (int) (quitaPorDetras((long) x, n));
     }
 
     /**
@@ -315,13 +312,8 @@ public class General {
      * @param n Cantidad de números a cortar por delante
      * @return Número recortado por delante
      */
-    public static long quitaPorDelante(long x, long n) {
-        // Var declarations
-        long res;
-        // Process
-        x = voltea(x);
-        res = (long) (x / potencia(10, (int) n));
-        return voltea(res);
+    public static long quitaPorDelante(long x, int n) {
+        return (long) (x % potencia(10, digitos(x) - n));
     }
 
     /**
@@ -332,7 +324,7 @@ public class General {
      * @return Número recortado por delante
      */
     public static int quitaPorDelante(int x, int n) {
-        return (int) quitaPorDetras((long) x, (long) n);
+        return (int) quitaPorDetras((long) x, n);
     }
 
     /**
@@ -343,13 +335,8 @@ public class General {
      * @return Nuevo número con el dígito añadido detrás
      */
     public static long pegaPorDetras(long x, long n) {
-        // Process
-        n = voltea(n);
-        while (n > 0) {
-            x *= 10;
-            x += n % 10;
-            n /= 10;
-        }
+        x *= potencia(10, digitos(n));
+        x += n;
         return x;
     }
 
@@ -373,15 +360,9 @@ public class General {
      */
     public static long pegaPorDelante(long x, long n) {
         // Process
-        x = voltea(x);
-        // n = voltea(n);
-        while (n > 0) {
-            x *= 10;
-            x += n % 10;
-            n /= 10;
-        }
-        x = voltea(x);
-        return x;
+        n *= potencia(10, digitos(x));
+        n += x;
+        return n;
     }
 
     /**
@@ -404,16 +385,15 @@ public class General {
      * @param nEnd  Posición final
      * @return Nuevo trozo de número
      */
-    public static long trozoDeNumero(long x, long nInit, long nEnd) {
-        // Var declarations
-        // Var init
+    public static long trozoDeNumero(long x, int nInit, int nEnd) {
         // Process
-        for (int i = 0; i < nEnd; i++)
-            x /= 10;
-        x = voltea(x);
-        for (int i = 0; i < nInit; i++)
-            x /= 10;
-        x = voltea(x);
+        int longitud = digitos(x);
+        if (nInit < 0 || nInit > longitud)
+            return -1;
+        if (nEnd < 0 || nEnd > longitud)
+            return -1;
+        x = quitaPorDelante(x, nInit);
+        x = quitaPorDetras(x, nEnd);
         return x;
     }
 
@@ -427,7 +407,7 @@ public class General {
      * @return Nuevo trozo de número
      */
     public static int trozoDeNumero(int x, int nInit, int nEnd) {
-        return (int) (trozoDeNumero((long) x, (long) nInit, (long) nEnd));
+        return (int) (trozoDeNumero((long) x, nInit, nEnd));
     }
 
     /**
@@ -438,8 +418,10 @@ public class General {
      * @return Nuevo número formado por los dos números pasados
      */
     public static long juntaNumeros(long x, long n) {
+        int longitud = digitos(n);
+        x = x * (long) potencia(10, longitud) + n;
         // Process
-        return pegaPorDetras(x, n);
+        return x;
     }
 
     /**
@@ -449,8 +431,8 @@ public class General {
      * @param n Segundo número
      * @return Nuevo número formado por los dos números pasados
      */
-    public static int juntaNumeros(int x, int n) {
-        return (int) juntaNumeros((long) x, (long) n);
+    public static long juntaNumeros(int x, int n) {
+        return juntaNumeros((long) x, (long) n);
     }
 
     /**

@@ -128,9 +128,9 @@ public class PruebaFunciones {
                 num1 = sc.nextLong();
                 System.out.print("Introduce cuantos dígitos quieres eliminar: ");
                 num2 = sc.nextLong();
-                res = General.quitaPorDetras(num1, num2);
+                res = General.quitaPorDetras(num1, (int) num2);
                 System.out.println("Al número  " + num1 + ", si le quitas los " + num2 + " últimos dígitos, queda: "
-                                + res);
+                                + (int) res);
 
                 // 10. quitaPorDelante: Le quita a un número n dígitos por delante (por la
                 // izquierda).
@@ -140,9 +140,9 @@ public class PruebaFunciones {
                 num1 = sc.nextLong();
                 System.out.print("Introduce cuantos dígitos quieres eliminar: ");
                 num2 = sc.nextLong();
-                res = General.quitaPorDelante(num1, num2);
+                res = General.quitaPorDelante(num1, (int) num2);
                 System.out.println("Al número  " + num1 + ", si le quitas los " + num2 + " primeros dígitos, queda: "
-                                + res);
+                                + (int) res);
 
                 // 11. pegaPorDetras: Añade un dígito a un número por detrás.
                 System.out.println(
@@ -174,8 +174,8 @@ public class PruebaFunciones {
                 num2 = sc.nextLong();
                 System.out.print("Introduce la posición final: ");
                 num3 = sc.nextLong();
-                res = General.trozoDeNumero(num1, num2, num3);
-                System.out.println("El número  " + num1 + " queda troceado como: " + res);
+                res = General.trozoDeNumero(num1, (int) num2, (int) num3);
+                System.out.println("El número  " + num1 + " queda troceado como: " + (int) res);
 
                 // 14. juntaNumeros: Pega dos números para formar uno.
                 System.out.println(
@@ -185,7 +185,7 @@ public class PruebaFunciones {
                 System.out.print("Introduce el segundo número a añadir por detrás: ");
                 num2 = sc.nextLong();
                 res = General.juntaNumeros(num1, num2);
-                System.out.println("El número  " + num1 + ", con " + num2 + " por detrás, queda: " + res);
+                System.out.println("El número  " + num1 + ", con " + num2 + " por detrás, queda: " + (int) res);
 
                 // Close Scanner
                 sc.close();
