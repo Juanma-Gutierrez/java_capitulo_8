@@ -55,8 +55,8 @@ public class Ejercicios29_34 {
         num = 0;
         row = 0;
         col = 0;
-        min = 0;
-        max = 42;
+        min = -100000;
+        max = 100000;
         dir = "";
         bool = false;
 
@@ -66,7 +66,7 @@ public class Ejercicios29_34 {
         // Ejercicio 29
         // generaArrayBiInt: Genera un array de tamaño n x m con números
         // aleatorios cuyo intervalo (mínimo y máximo) se indica como parámetro.
-        System.out.println("Ejercicio 20");
+        System.out.println("Ejercicio 29");
         System.out.print("Introduce el número de filas: ");
         row = sc.nextInt();
         System.out.print("Introduce el número de columnas: ");
@@ -100,6 +100,7 @@ public class Ejercicios29_34 {
         // elementos) de la primera ocurrencia de un número dentro de un array
         // bidimensional. Si el número no se encuentra en el array, la función devuelve
         // el array {-1, -1}.
+        System.out.println("Ejercicio 32");
         System.out.print("Introduce el número quieres encontrar: ");
         num = sc.nextInt();
         auxArray = BidimensionalArrays.coordenadasEnArrayBiInt(listArray, num);
@@ -109,6 +110,7 @@ public class Ejercicios29_34 {
         // Ejercicio 33
         // esPuntoDeSilla: Dice si un número es o no punto de silla, es decir,
         // mínimo en su fila y máximo en su columna.
+        System.out.println("Ejercicio 33");
         System.out.print("Introduce el número quieres saber si es punto de silla: ");
         num = sc.nextInt();
         bool = BidimensionalArrays.esPuntoDeSilla(listArray, num);
@@ -124,6 +126,7 @@ public class Ejercicios29_34 {
         // cadena “neso” indica que se elige la diagonal que va del noreste hacia el
         // suroeste.
         sc.nextLine();
+        System.out.println("Ejercicio 34");
         System.out.print("Introduce qué diagonal quieres (nose/neso): ");
         dir = sc.nextLine();
         System.out.print("Introduce el número de fila: ");

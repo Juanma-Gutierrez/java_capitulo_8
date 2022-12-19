@@ -1,5 +1,7 @@
 package comp.jgutierr.arrays;
 
+import comp.jgutierr.matematicas.General;
+
 /*
  * Lista de funciones de la biblioteca BidimensionalArray:
  *
@@ -28,9 +30,19 @@ public class BidimensionalArrays {
      * @return Sin salida, únicamente imprime el array pasado
      */
     public static void printBiArray(int listArray[][]) {
+        int max;
+
+        max = 0;
+        for (int i = 0; i < listArray.length; i++)
+            for (int j = 0; j < listArray[i].length; j++) {
+                int digitos = General.digitos(listArray[i][j]);
+                if (digitos > max)
+                    max = digitos;
+            }
+        String size = "%" + (max + 1) + "d ";
         for (int i = 0; i < listArray.length; i++) {
             for (int j = 0; j < listArray[i].length; j++)
-                System.out.printf("%5d", listArray[i][j]);
+                System.out.printf(size, listArray[i][j]);
             System.out.println();
         }
     }
@@ -67,16 +79,13 @@ public class BidimensionalArrays {
     public static int[] filaDeArrayBiInt(int[][] listArray, int i) {
         // Var declarations
         int[] resArray;
-        int[] empty;
 
         // Var init
-        empty = new int[1];
-        empty[0] = -1;
-        resArray = new int[listArray[0].length];
+        resArray = new int[listArray[i].length];
 
         // error control
-        if (i >= listArray.length)
-            return empty;
+        if (listArray == null || listArray.length == 0 || i < 0 || i >= listArray.length)
+            return null;
 
         // Process
         for (int j = 0; j < listArray[i].length; j++)
@@ -95,16 +104,13 @@ public class BidimensionalArrays {
     public static int[] columnaDeArrayBiInt(int[][] listArray, int j) {
         // Var declarations
         int[] resArray;
-        int[] empty;
 
         // Var init
-        empty = new int[1];
-        empty[0] = -1;
         resArray = new int[listArray.length];
 
         // error control
-        if (j >= listArray.length)
-            return empty;
+        if (listArray == null || listArray.length == 0 || j < 0 || j >= listArray[0].length)
+            return null;
 
         // Process
         for (int i = 0; i < listArray.length; i++)
@@ -124,9 +130,12 @@ public class BidimensionalArrays {
      */
     public static int[] coordenadasEnArrayBiInt(int[][] listArray, int num) {
         // Var declarations
-        int[] resArray;
-        // Var init
-        resArray = new int[2];
+        int[] resArray = { -1, -1 };
+
+        // error control
+        if (listArray == null)
+            return resArray;
+
         // Process
         for (int i = 0; i < listArray.length; i++)
             for (int j = 0; j < listArray[i].length; j++)
@@ -135,8 +144,6 @@ public class BidimensionalArrays {
                     resArray[1] = j;
                     return resArray;
                 }
-        resArray[0] = -1;
-        resArray[1] = -1;
         return resArray;
     }
 
